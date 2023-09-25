@@ -9,14 +9,14 @@ public class Tower : MonoBehaviour
     public float turnSpeed = 10f;
     public float range = 10f;
     public float fireRate = 1f;
-    private float fireCountDown = 0f;
+    public float fireCountDown = 0f;
 
     [Header("Unity Setup")]
     public string enemyTag = "Enemy";
     private Transform target;
     public Transform partToRotate;
     public GameObject bulletPrefab;
-    public transform firepoint;
+    public Transform firepoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +49,7 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        fireCountDown -= Time.deltaTime;
         if(target == null)
         {
             return;
@@ -63,13 +64,17 @@ public class Tower : MonoBehaviour
             Shoot();
             fireCountDown = 1f / fireRate;
         }
-
-        fireCountDown -= Time.deltaTime;
     }
 
     void Shoot ()
     {
-        Debug.Log("shoot");
+        GameObject projectileGO = (GameObject)Instantiate (bulletPrefab, firepoint.position, firepoint.rotation);
+        Projectile bullet = projectileGO.GetComponent<Projectile>(); 
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
     }
 
     void OnDrawGizmosSelected ()

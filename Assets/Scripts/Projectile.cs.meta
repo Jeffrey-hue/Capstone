@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: f08998774b97c1747b4da194fed5e905
+guid: 3468eee8388edaf4c95bf43969d2def4
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - partToRotate: {instanceID: 0}
-  - bulletPrefab: {instanceID: 0}
-  - firepoint: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
