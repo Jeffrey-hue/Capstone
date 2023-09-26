@@ -5894,7 +5894,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3550f83f9a5e3b4b849d3fdca9a8a60, type: 2}
+  - {fileID: 2100000, guid: 33b1d1a91b12be24ca2bcba0823035ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9145,7 +9145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6480394266686755367
 Transform:
   m_ObjectHideFlags: 0
@@ -9197,12 +9197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08998774b97c1747b4da194fed5e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 10
-  range: 10
+  turnSpeed: 20
+  range: 5.45
   fireRate: 1
+  fireCountDown: 0
   enemyTag: Enemy
   partToRotate: {fileID: 6480394266686755367}
-  bulletPrefab: {fileID: 202033295009574406, guid: ce1b8fa7704b1b44e9f1fce0c442778e, type: 3}
+  bulletPrefab: {fileID: 7650775292281265100, guid: 89af63e538b498147bdd1d8312692b73, type: 3}
   firepoint: {fileID: 2575857759101162432}
 --- !u!1 &5918101825499409045
 GameObject:

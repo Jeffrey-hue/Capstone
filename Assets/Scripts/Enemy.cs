@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-   public float speed = 10f;
-
+   public float speed = 10f; 
    private Transform target;
    private int wavepointIndex = 0;
-
    void Start()
    {
     target = Waypoints.points[0];
@@ -35,5 +33,8 @@ public class Enemy : MonoBehaviour
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
     }
+    /*void Health(){
+        ui = GameObject.FindObjectOfType<EnemyUI> ();
+    }*/
    }
 }

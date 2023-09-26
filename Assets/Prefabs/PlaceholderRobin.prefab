@@ -10981,7 +10981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8602430209487051123
 Transform:
   m_ObjectHideFlags: 0
@@ -11035,10 +11035,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   range: 10
-  fireRate: 1
+  fireRate: 3
+  fireCountDown: 0
   enemyTag: Enemy
   partToRotate: {fileID: 8602430209487051123}
-  bulletPrefab: {fileID: 202033295009574406, guid: ce1b8fa7704b1b44e9f1fce0c442778e, type: 3}
+  bulletPrefab: {fileID: 5775855775899583445, guid: 504a7c453954452449d90b947e48a177, type: 3}
   firepoint: {fileID: 10306603702984951}
 --- !u!1 &7492176043559472590
 GameObject:
