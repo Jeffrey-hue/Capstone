@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.UI;
 
 public class Enemy : MonoBehaviour
 {
    public float speed = 10f; 
    private Transform target;
    private int wavepointIndex = 0;
+   //public Image healthbar;
+   //public float health;
    void Start()
    {
     target = Waypoints.points[0];

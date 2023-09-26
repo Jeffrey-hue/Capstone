@@ -24,6 +24,10 @@ public class Projectile : MonoBehaviour
 
  void Update ()
     {
+        if(Target == null){
+            Destroy(gameObject);
+            return;
+        }
         Vector3 dir = targetPosition - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
         if (dir.magnitude <= distanceThisFrame)
@@ -36,9 +40,12 @@ public class Projectile : MonoBehaviour
     void HitTarget()
     {
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 2f);
-        Destroy(Target.gameObject);
-        Destroy(gameObject);
+        if (effectIns != null){
+            Destroy(effectIns, 2f);
+            Destroy(Target.gameObject);
+            Destroy(gameObject);
+        }
+        
     }
 
 }
