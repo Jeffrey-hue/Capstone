@@ -16,16 +16,31 @@ public class BuildManager : MonoBehaviour
         instance = this;
         
     }
+    public GameObject Luffy;
+    public GameObject Zoro;
+    public GameObject Chopper;
+    public GameObject Robin;
+    public GameObject Uta;
+    private TowerBlueprint turretToBuild;
 
-    public GameObject standardTurretPrefab;
-    void Start ()
+    public bool CanBuild { get { return this.turretToBuild.prefab != null; }}
+
+
+    public void BuildTurretOn (Node node)
     {
-        turretToBuild = standardTurretPrefab;
+        if (PlayerStats.Money < turretToBuild.cost)
+        {
+            Debug.Log("Add Notif to player");
+            return;
+        }
+
+        PlayerStats.Money -= turretToBuild.cost;
+        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret;
+        Debug.Log("Turret built money left: " + PlayerStats.Money);
     }
-    private GameObject turretToBuild;
-
-    public GameObject GetTurretTOBuild ()
+    public void SelectTurretToBuild (TowerBlueprint turret)
     {
-        return turretToBuild;
+        turretToBuild = turret;
     }
 }
