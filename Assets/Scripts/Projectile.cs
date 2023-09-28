@@ -7,6 +7,8 @@ public class Projectile : MonoBehaviour
     public float speed = 70f;
     public float ExplosionRadius = 0f;
     public GameObject impactEffect;
+
+    public int damage = 50;
     public void Seek(Transform _target)
     {
         targetPosition= _target.position;
@@ -59,7 +61,12 @@ public class Projectile : MonoBehaviour
 
     void Damage (Transform enemy)
     {
-        Destroy(enemy.gameObject);
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if (e != null)
+        {
+            e.TakeDamage(damage);
+        }
     }
 
     void OnDrawGizmosSelected (){

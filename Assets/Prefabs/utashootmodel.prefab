@@ -146,7 +146,7 @@ Transform:
   - {fileID: 9185987150702954890}
   - {fileID: 7045925188194553521}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6531248677399945332
 MonoBehaviour:
@@ -161,4 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 140
+  ExplosionRadius: 0
   impactEffect: {fileID: 8443315704496310910, guid: 6ef35fa36e3a65043b2d800600204bdd, type: 3}
+  damage: 75

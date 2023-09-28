@@ -23,7 +23,8 @@ public class BuildManager : MonoBehaviour
     public GameObject Uta;
     private TowerBlueprint turretToBuild;
 
-    public bool CanBuild { get { return this.turretToBuild.prefab != null; }}
+    public bool CanBuild {get {return this.turretToBuild.prefab != null;}}
+    public bool HasMoney {get {return PlayerStats.Money >= turretToBuild.cost;}}
 
 
     public void BuildTurretOn (Node node)

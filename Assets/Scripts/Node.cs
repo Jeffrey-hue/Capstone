@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
+    public Color noMoneyColor;
     public Color hoverColor;
     public Vector3 positionOffset;
     [Header("optional")]
@@ -13,11 +14,14 @@ public class Node : MonoBehaviour
     private Color startColor;
     BuildManager buildManager;
 
+    void Awake ()
+    {
+        buildManager = BuildManager.instance;
+    }
     void Start()
     {
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
-        buildManager = BuildManager.instance;
     }
     void OnMouseDown ()
     {
@@ -33,7 +37,7 @@ public class Node : MonoBehaviour
 
         buildManager.BuildTurretOn(this);
     }
-    void OnMouseEnter ()
+    public void OnMouseEnter ()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
@@ -41,11 +45,18 @@ public class Node : MonoBehaviour
         }
 
         if (!buildManager.CanBuild == null)
-        {
-            
+        {  
             return;
         }
-        rend.material.color = hoverColor;
+        if (buildManager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = noMoneyColor;
+        }
+        
     }
 
     void OnMouseExit()
