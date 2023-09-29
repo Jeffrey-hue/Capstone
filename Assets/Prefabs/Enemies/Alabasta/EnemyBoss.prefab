@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 6460992243204699485}
   - component: {fileID: 1682927541325944721}
   m_Layer: 0
-  m_Name: Enemy 4
+  m_Name: EnemyBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,7 +334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 440b08e66addacd4bba075fbee5196ea, type: 2}
+  - {fileID: 2100000, guid: 9be619b4140eaae40ab478ce9085a1c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -391,3 +391,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   health: 100
+  value: 50

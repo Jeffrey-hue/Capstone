@@ -28,26 +28,34 @@ public class WaveSpawner : MonoBehaviour
       return;
     }
     if(srtGame == true){
-        if (countdown <= 0)
-        {
-            StartCoroutine(SpawnWave());
-            countdown = WaveTime;
-            return;
-        }
-        countdown -= Time.deltaTime;
+      if (countdown <= 0)
+      {
+          StartCoroutine(SpawnWave());
+          countdown = WaveTime;
+          return;
+      }
+      countdown -= Time.deltaTime;
 
-        WaveTimer.text = Mathf.Round(countdown).ToString();
+      WaveTimer.text = Mathf.Round(countdown).ToString();
     }
+    if (waveIndex == waves.Length)
+      {
+        Debug.Log("Won");
+        this.enabled = false;
+      }
   }
 
   IEnumerator SpawnWave()
   {
-
+    PlayerStats.Rounds++;
     Wave wave = waves[waveIndex];
-    for (int i = 0; i < wave.count; i++)
+    for (int z = 0; z < wave.enemies.Length; z++)
     {
-        SpawnEnemy(wave.enemy);
-        yield return new WaitForSeconds(1f / wave.rate);
+      for (int i = 0; i < wave.enemies[z].count; i++)
+      {
+          SpawnEnemy(wave.enemies[z].enemy);
+          yield return new WaitForSeconds(1f / wave.rate);
+      }
     }
     waveIndex++;
   }

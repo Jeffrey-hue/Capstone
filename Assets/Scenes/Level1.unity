@@ -1253,13 +1253,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemy: {fileID: 0}
-    count: 0
-    rate: 0
+  - rate: 1
+    enemies:
+    - enemy: {fileID: 7464116403180855035, guid: 9d3ca5af8287af1428f041933f62fef0, type: 3}
+      count: 1
+  - rate: 1
+    enemies:
+    - enemy: {fileID: 7464116403180855035, guid: 9d3ca5af8287af1428f041933f62fef0, type: 3}
+      count: 1
+    - enemy: {fileID: 7464116403180855035, guid: 456101060363bb345aa98bf2341c634c, type: 3}
+      count: 1
+  - rate: 2
+    enemies:
+    - enemy: {fileID: 7464116403180855035, guid: b4b4e6b6c625ad941922eb8387ae125b, type: 3}
+      count: 1
+  - rate: 1
+    enemies:
+    - enemy: {fileID: 7464116403180855035, guid: b4b4e6b6c625ad941922eb8387ae125b, type: 3}
+      count: 1
+    - enemy: {fileID: 7464116403180855035, guid: 11e9b7db72833fd4f90381d57d3c48ec, type: 3}
+      count: 1
+  - rate: 1
+    enemies:
+    - enemy: {fileID: 7464116403180855035, guid: ef40d29d53957ff409fa34454d2914cf, type: 3}
+      count: 1
   WaveTimer: {fileID: 1150404781}
   spawnPoint: {fileID: 1394782277}
   Strtbuttn: {fileID: 615683222}
-  WaveTime: 5
+  WaveTime: 1
 --- !u!4 &618968907
 Transform:
   m_ObjectHideFlags: 0
