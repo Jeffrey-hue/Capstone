@@ -17,6 +17,8 @@ public class Tower : MonoBehaviour
     public Transform partToRotate;
     public GameObject bulletPrefab;
     public Transform firepoint;
+    public bool slow;
+    public float slowPct = .5f;
     // Start is called before the first frame update
     void Start()
     {

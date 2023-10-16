@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-   public float speed = 10f; 
+
+    [HideInInspector]
+   public float speed;
+   public float Startspeed = 10f; 
    public int startHealth = 100;
    public float health;
    public int value = 50;
@@ -14,6 +17,7 @@ public class Enemy : MonoBehaviour
    public Image healthbar;
    void Start()
    {
+    speed = Startspeed;
     target = Waypoints.points[0];
     health = startHealth;
    }
