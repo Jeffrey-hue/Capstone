@@ -8,8 +8,11 @@ public class Node : MonoBehaviour
     public Color noMoneyColor;
     public Color hoverColor;
     public Vector3 positionOffset;
-    [Header("optional")]
+    [HideInInspector]
     public GameObject turret;
+    public TowerBlueprint towerBlueprint;
+    public int numOfUpgrades;
+    public bool isUpgraded = false;
     private Renderer rend;
     private Color startColor;
     BuildManager buildManager;
@@ -25,18 +28,88 @@ public class Node : MonoBehaviour
     }
     void OnMouseDown ()
     {
-        if (!buildManager.CanBuild == null)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            return;
-        }
-        if (turret != null)
-        {
-            Debug.Log("placed");
             return;
         }
 
-        buildManager.BuildTurretOn(this);
+        if (turret != null)
+        {
+            buildManager.SelectNode(this);
+            return;
+        }
+
+        if (!buildManager.CanBuild)
+        {
+            return;
+        }
+
+        BuildTurret(buildManager.GetTurretToBuild());
     }
+    void BuildTurret (TowerBlueprint blueprint)
+    {
+        if (PlayerStats.Money < blueprint.cost)
+        {
+            Debug.Log("Add Notif to player");
+            return;
+        }
+
+        PlayerStats.Money -= blueprint.cost;
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(), Quaternion.identity);
+        turret = _turret;
+        towerBlueprint = blueprint;
+        Debug.Log("Turret built money left: " + PlayerStats.Money);
+    }
+
+    public void UpgradeTurret ()
+    {
+        if (PlayerStats.Money < towerBlueprint.upgradeCost)
+        {
+            Debug.Log("Add Notif to player. Upgrade");
+            return;
+        }
+        numOfUpgrades ++;
+        if (numOfUpgrades < 4){
+            //get rid of old turret
+            Debug.Log("ahhh");
+            Destroy(turret);
+        }
+        if (numOfUpgrades == 1){
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 2;
+            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            Debug.Log("Turret built money left: " + PlayerStats.Money);
+        }
+        if (numOfUpgrades == 2){
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 3;
+            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedTwoPrefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            Debug.Log("Turret built money left: " + PlayerStats.Money);
+        }
+        if (numOfUpgrades == 3){
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 4;
+            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedThreePrefab, GetBuildPosition(), Quaternion.identity);
+            turret = _turret;
+            Debug.Log("Turret built money left: " + PlayerStats.Money);
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 0;
+        }
+        if (numOfUpgrades >= 4){
+            Debug.Log("Fully Upgraded");
+            return;
+        }
+        Debug.Log("Turret upgraded");
+    }
+
+    public void SellTurret()
+    {
+        PlayerStats.Money += towerBlueprint.GetSellAmount();
+        Destroy(turret);
+        towerBlueprint = null;
+    }
+
     public void OnMouseEnter ()
     {
         if (EventSystem.current.IsPointerOverGameObject())

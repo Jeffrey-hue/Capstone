@@ -21,27 +21,38 @@ public class BuildManager : MonoBehaviour
     public GameObject Chopper;
     public GameObject Robin;
     public GameObject Uta;
+    public NodeUi nodeUI;
     private TowerBlueprint turretToBuild;
+    private Node selectedNode;
 
     public bool CanBuild {get {return this.turretToBuild.prefab != null;}}
     public bool HasMoney {get {return PlayerStats.Money >= turretToBuild.cost;}}
 
-
-    public void BuildTurretOn (Node node)
+    public void SelectNode (Node node)
     {
-        if (PlayerStats.Money < turretToBuild.cost)
+        if(selectedNode == node)
         {
-            Debug.Log("Add Notif to player");
+            DeselectNode();
             return;
         }
+        selectedNode = node;
+        turretToBuild = null;
 
-        PlayerStats.Money -= turretToBuild.cost;
-        GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
-        node.turret = turret;
-        Debug.Log("Turret built money left: " + PlayerStats.Money);
+        nodeUI.SetTarget(node);
+    }
+    public void DeselectNode()
+    {
+        selectedNode = null;
+        nodeUI.Hide();
     }
     public void SelectTurretToBuild (TowerBlueprint turret)
     {
         turretToBuild = turret;
+        DeselectNode();
+    }
+
+    public TowerBlueprint GetTurretToBuild ()
+    {
+        return turretToBuild;
     }
 }

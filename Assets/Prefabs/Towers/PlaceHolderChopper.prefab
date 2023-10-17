@@ -6572,6 +6572,8 @@ MonoBehaviour:
   partToRotate: {fileID: 2013008383938520375}
   bulletPrefab: {fileID: 7650775292281265100, guid: 82fc60d935f518a48a513943c7c2bb34, type: 3}
   firepoint: {fileID: 1057726236291133321}
+  slow: 0
+  slowPct: 0
 --- !u!1 &3013730497694030738
 GameObject:
   m_ObjectHideFlags: 0
