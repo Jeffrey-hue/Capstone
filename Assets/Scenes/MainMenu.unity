@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 5e7eaab6244f3cd488698e9c5bbd4811, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -210,7 +210,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1349337623}
   transitionTime: 1
-  LevelToLoad: Level1
 --- !u!4 &95363537
 Transform:
   m_ObjectHideFlags: 0
@@ -945,7 +944,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 1349337623}
   transitionTime: 1
-  LevelToLoad: Level1
 --- !u!114 &1060636920
 MonoBehaviour:
   m_ObjectHideFlags: 0

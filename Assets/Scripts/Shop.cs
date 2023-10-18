@@ -15,6 +15,13 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
     }
+    void Update ()
+    {
+          if (GameManager.gameEnded){
+            this.enabled = false;
+            return;
+          }
+    }
    public void SelectLuffy ()
    {
         Debug.Log("luffy purchased");

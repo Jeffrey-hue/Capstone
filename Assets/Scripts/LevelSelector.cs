@@ -9,6 +9,17 @@ public class LevelSelector : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     public string levelIndex;
+    public Button[] levelButton;
+
+    public void Start ()
+    {
+        int levelReached = PlayerPrefs.GetInt ("levelReached", 1);
+        for (int i = 0; i < levelButton.Length; i++)
+        {
+            if (i + 1 > levelReached)
+                levelButton[i].interactable = false;
+        }
+    }
     
     public void Alabasta()
     {

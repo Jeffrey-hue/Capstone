@@ -6,16 +6,34 @@ using TMPro;
 
 public class GameOver : MonoBehaviour
 {
-    //Add rounds text 
+    public TMP_Text roundTxt;
+    public Animator transition;
+    public float transitionTime = 1f;
+    public string levelIndex;
     
+    void Awake ()
+    {
+        roundTxt.text = PlayerStats.Rounds.ToString();
+    }
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        levelIndex = "Level1";
+        StartCoroutine(Load(levelIndex));
     }
     public void Menu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        levelIndex = "MainMenu";
+        StartCoroutine(Load(levelIndex));
     }
 
+    IEnumerator Load(string levelIndex)
+   {
+        //play
+        transition.SetTrigger("Start");
+        //wait
+        yield return new WaitForSeconds(2);
+        //load
+        SceneManager.LoadScene(levelIndex);
+   }
 }

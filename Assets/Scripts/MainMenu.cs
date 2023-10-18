@@ -8,6 +8,14 @@ public class MainMenu : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     
+     public void Update ()
+     {
+          if (Input.GetKey("q"))
+          {
+               PlayerPrefs.SetInt("levelReached", 1);
+          }
+     }
+
    public void Play()
    {
         LoadLevel();

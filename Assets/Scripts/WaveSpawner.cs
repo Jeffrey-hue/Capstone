@@ -15,6 +15,7 @@ public class WaveSpawner : MonoBehaviour
   private float countdown = 0f;
   private int waveIndex = 0;
   private bool srtGame;
+  public GameManager gameManager;
 
 
   void Start()
@@ -22,9 +23,19 @@ public class WaveSpawner : MonoBehaviour
     srtGame = false;
   }
   void Update ()
-  {     
+  {
+    if (waveIndex == waves.Length)
+      {
+        gameManager.WinLevel();
+        this.enabled = false;
+      }     
     if (EnemiesAlive > 0)
     {
+      return;
+    }
+    if (waveIndex == 5)
+    {
+      Debug.Log("arugh");
       return;
     }
     if(srtGame == true){
@@ -38,11 +49,6 @@ public class WaveSpawner : MonoBehaviour
 
       WaveTimer.text = Mathf.Round(countdown).ToString();
     }
-    if (waveIndex == waves.Length)
-      {
-        Debug.Log("Won");
-        this.enabled = false;
-      }
   }
 
   IEnumerator SpawnWave()

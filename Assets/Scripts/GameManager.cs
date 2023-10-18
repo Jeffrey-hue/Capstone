@@ -5,7 +5,15 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    private bool gameEnded = false;
+    public static bool gameEnded;
+    public GameObject gameOverUI;
+    public GameObject shopUI;
+    public string nextLevel = "Level2";
+    public int levelToUnlock = 2;
+    void Start ()
+    {
+        gameEnded = false;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -21,6 +29,13 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         gameEnded = true;
-        Debug.Log("Game over!");
+        gameOverUI.SetActive(true);
+        shopUI.SetActive(false);
     }
+
+    public void WinLevel()
+    {
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);
+    }
+    
 }
