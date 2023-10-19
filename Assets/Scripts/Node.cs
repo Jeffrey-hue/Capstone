@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
+    public GameObject nodes;
     public Color noMoneyColor;
     public Color hoverColor;
     public Vector3 positionOffset;
@@ -74,27 +75,31 @@ public class Node : MonoBehaviour
             Debug.Log("ahhh");
             Destroy(turret);
         }
+        if (numOfUpgrades == 0)
+        {
+            towerBlueprint.upgradeCost = towerBlueprint.startUpgradeCost + 100;
+        }
         if (numOfUpgrades == 1){
-            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 2;
-            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            towerBlueprint.upgradeCost = towerBlueprint.startUpgradeCost * 2;
+            PlayerStats.Money -= towerBlueprint.startUpgradeCost;
             GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
             turret = _turret;
             Debug.Log("Turret built money left: " + PlayerStats.Money);
         }
         if (numOfUpgrades == 2){
-            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 3;
-            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            towerBlueprint.upgradeCost = towerBlueprint.startUpgradeCost * 3;
+            PlayerStats.Money -= towerBlueprint.startUpgradeCost;
             GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedTwoPrefab, GetBuildPosition(), Quaternion.identity);
             turret = _turret;
             Debug.Log("Turret built money left: " + PlayerStats.Money);
         }
         if (numOfUpgrades == 3){
-            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 4;
-            PlayerStats.Money -= towerBlueprint.upgradeCost;
+            towerBlueprint.upgradeCost = towerBlueprint.startUpgradeCost * 4;
+            PlayerStats.Money -= towerBlueprint.startUpgradeCost;
             GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedThreePrefab, GetBuildPosition(), Quaternion.identity);
             turret = _turret;
             Debug.Log("Turret built money left: " + PlayerStats.Money);
-            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 0;
+            towerBlueprint.upgradeCost = towerBlueprint.startUpgradeCost * 0;
         }
         if (numOfUpgrades >= 4){
             Debug.Log("Fully Upgraded");

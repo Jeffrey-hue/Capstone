@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static bool gameEnded;
     public GameObject gameOverUI;
+    public GameObject WinUI;
     public GameObject shopUI;
     public string nextLevel = "Level2";
     public int levelToUnlock = 2;
@@ -35,7 +36,9 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
+        gameEnded = true;
+        WinUI.SetActive(true);
+        shopUI.SetActive(false);
     }
     
 }

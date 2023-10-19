@@ -22,6 +22,9 @@ public class NodeUi : MonoBehaviour
         if (target.towerBlueprint.upgradeCost == 0){
             upgradeCost.text = "MAXED";
             upgradeButton.interactable = false;
+        } else
+        {
+            upgradeButton.interactable = true;
         }
         sellAmount.text = "$" + target.towerBlueprint.GetSellAmount();
 

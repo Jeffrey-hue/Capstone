@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
-public class GameOver : MonoBehaviour
+public class WinLevel : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 1f;
     public string levelIndex;
-    
+    public int levelToUnlock = 2;
 
-    public void Retry()
-    {
-        levelIndex = "Level1";
-        StartCoroutine(Load(levelIndex));
-    }
-    public void Menu()
+    public void Menu ()
     {
         levelIndex = "MainMenu";
+        StartCoroutine(Load(levelIndex));
+    }
+
+    public void Continue()
+    {
+        levelIndex = "Level Select";
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);
         StartCoroutine(Load(levelIndex));
     }
 

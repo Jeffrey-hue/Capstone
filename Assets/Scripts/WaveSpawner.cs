@@ -24,20 +24,15 @@ public class WaveSpawner : MonoBehaviour
   }
   void Update ()
   {
+    if (EnemiesAlive > 0)
+    {
+      return;
+    }
     if (waveIndex == waves.Length)
       {
         gameManager.WinLevel();
         this.enabled = false;
       }     
-    if (EnemiesAlive > 0)
-    {
-      return;
-    }
-    if (waveIndex == 5)
-    {
-      Debug.Log("arugh");
-      return;
-    }
     if(srtGame == true){
       if (countdown <= 0)
       {
@@ -63,6 +58,7 @@ public class WaveSpawner : MonoBehaviour
           yield return new WaitForSeconds(1f / wave.rate);
       }
     }
+    
     waveIndex++;
   }
 
