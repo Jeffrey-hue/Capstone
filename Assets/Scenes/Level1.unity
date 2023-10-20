@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &535073234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 0}
+  shop: {fileID: 0}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -2089,8 +2089,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &609797941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2449,7 +2452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60851f87b2ba7524ab9ef242d3fa1fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
   Luffy: {fileID: 7882976801231643994, guid: 9369a205ba6db024d96c7a54f6c0f643, type: 3}
   Zoro: {fileID: 5898878937593585125, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
   Chopper: {fileID: 2975027406246432002, guid: 48a9c682a6ed3af45a2fc188a654cf4f, type: 3}
@@ -8003,6 +8005,8 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 7882976801231643994, guid: fe85713d996c6064bbcc0d6458a96299, type: 3}
     upgradedThreePrefab: {fileID: 7882976801231643994, guid: e75413c78a4e2a741a0dfa528f545197, type: 3}
     upgradeCost: 100
+    startUpgradeCost: 100
+    fullyUpgraded: 0
   Zoro:
     prefab: {fileID: 5898878937593585125, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
     cost: 100
@@ -8010,6 +8014,8 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 5898878937593585125, guid: 11587293b17b3ed45bb7a986dd060e6a, type: 3}
     upgradedThreePrefab: {fileID: 5898878937593585125, guid: 9aae849763379e94e82432d60e16ac5a, type: 3}
     upgradeCost: 100
+    startUpgradeCost: 100
+    fullyUpgraded: 0
   Chopper:
     prefab: {fileID: 2975027406246432002, guid: 48a9c682a6ed3af45a2fc188a654cf4f, type: 3}
     cost: 100
@@ -8017,6 +8023,8 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 2975027406246432002, guid: 9eac62a49cfeb394e86ea659a78bc704, type: 3}
     upgradedThreePrefab: {fileID: 2975027406246432002, guid: 4a0f3137532842648be428d37dbcd067, type: 3}
     upgradeCost: 100
+    startUpgradeCost: 100
+    fullyUpgraded: 0
   Robin:
     prefab: {fileID: 7464646948071341146, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
     cost: 100
@@ -8024,6 +8032,8 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 7464646948071341146, guid: ee5783b0d4b5382438ab6f99e4383b74, type: 3}
     upgradedThreePrefab: {fileID: 7464646948071341146, guid: 6a0ae7ac808f94147b24035bf1831ac2, type: 3}
     upgradeCost: 100
+    startUpgradeCost: 100
+    fullyUpgraded: 0
   Uta:
     prefab: {fileID: 4756911637432057019, guid: b0dd5448139acef4c851fd382a7ac7a2, type: 3}
     cost: 100
@@ -8031,6 +8041,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 4756911637432057019, guid: 1d6d1d399d0a28b41bdf95835c9c66d8, type: 3}
     upgradedThreePrefab: {fileID: 4756911637432057019, guid: afe541bab6100884a832be7b378243a3, type: 3}
     upgradeCost: 100
+    startUpgradeCost: 100
+    fullyUpgraded: 0
+  nodes: {fileID: 3803044378103580364}
+  hideNodes: 1
+  invis: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2086193476
 GameObject:
   m_ObjectHideFlags: 0
@@ -8324,7 +8339,7 @@ GameObject:
   - component: {fileID: 6906239936466663001}
   m_Layer: 0
   m_Name: Node (65)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8352,7 +8367,7 @@ GameObject:
   - component: {fileID: 6139471750493405811}
   m_Layer: 0
   m_Name: Node (6)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8401,7 +8416,7 @@ GameObject:
   - component: {fileID: 8585416615969508887}
   m_Layer: 0
   m_Name: Node (10)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8588,7 +8603,7 @@ GameObject:
   - component: {fileID: 7366589966675796192}
   m_Layer: 0
   m_Name: Node (147)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8608,7 +8623,7 @@ GameObject:
   - component: {fileID: 8810171535175133859}
   m_Layer: 0
   m_Name: Node (11)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8628,7 +8643,7 @@ GameObject:
   - component: {fileID: 8315075130959243612}
   m_Layer: 0
   m_Name: Node (146)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8669,7 +8684,7 @@ GameObject:
   - component: {fileID: 3584659154157027058}
   m_Layer: 0
   m_Name: Node (136)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8739,7 +8754,7 @@ GameObject:
   - component: {fileID: 6846650921634644155}
   m_Layer: 0
   m_Name: Node (63)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8759,7 +8774,7 @@ GameObject:
   - component: {fileID: 9016496216736610557}
   m_Layer: 0
   m_Name: Node (145)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8779,7 +8794,7 @@ GameObject:
   - component: {fileID: 8906966459613641123}
   m_Layer: 0
   m_Name: Node (181)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8843,7 +8858,7 @@ GameObject:
   - component: {fileID: 4923491215473373214}
   m_Layer: 0
   m_Name: Node (8)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8905,7 +8920,7 @@ GameObject:
   - component: {fileID: 8202327996885682826}
   m_Layer: 0
   m_Name: Node (5)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8925,7 +8940,7 @@ GameObject:
   - component: {fileID: 6500747323885765709}
   m_Layer: 0
   m_Name: Node (174)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8945,7 +8960,7 @@ GameObject:
   - component: {fileID: 3934046817890351598}
   m_Layer: 0
   m_Name: Node (40)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8965,7 +8980,7 @@ GameObject:
   - component: {fileID: 7298237339088494775}
   m_Layer: 0
   m_Name: Node (99)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9332,7 +9347,7 @@ GameObject:
   - component: {fileID: 6538135056726808178}
   m_Layer: 0
   m_Name: Node (190)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9699,7 +9714,7 @@ GameObject:
   - component: {fileID: 6696032502950161615}
   m_Layer: 0
   m_Name: Node (157)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9749,7 +9764,7 @@ GameObject:
   - component: {fileID: 3001478347682153952}
   m_Layer: 0
   m_Name: Node (128)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9826,7 +9841,7 @@ GameObject:
   - component: {fileID: 4829111328524669842}
   m_Layer: 0
   m_Name: Node (110)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9888,7 +9903,7 @@ GameObject:
   - component: {fileID: 6291518296668862930}
   m_Layer: 0
   m_Name: Node (87)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9908,7 +9923,7 @@ GameObject:
   - component: {fileID: 7221700322092310806}
   m_Layer: 0
   m_Name: Node (161)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9949,7 +9964,7 @@ GameObject:
   - component: {fileID: 6350703533648223887}
   m_Layer: 0
   m_Name: Node (119)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9969,7 +9984,7 @@ GameObject:
   - component: {fileID: 4436882664028165666}
   m_Layer: 0
   m_Name: Node (54)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9989,7 +10004,7 @@ GameObject:
   - component: {fileID: 8993350081641250344}
   m_Layer: 0
   m_Name: Node (94)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10009,7 +10024,7 @@ GameObject:
   - component: {fileID: 7299476293693518855}
   m_Layer: 0
   m_Name: Node (67)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10094,7 +10109,7 @@ GameObject:
   - component: {fileID: 6881227425353652262}
   m_Layer: 0
   m_Name: Node (182)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10208,7 +10223,7 @@ GameObject:
   - component: {fileID: 7153509480985528366}
   m_Layer: 0
   m_Name: Node (153)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10633,7 +10648,7 @@ GameObject:
   - component: {fileID: 6093541956425624960}
   m_Layer: 0
   m_Name: Node (116)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10718,7 +10733,7 @@ GameObject:
   - component: {fileID: 7166042441582104724}
   m_Layer: 0
   m_Name: Node (33)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10817,7 +10832,7 @@ GameObject:
   - component: {fileID: 8551657757759057435}
   m_Layer: 0
   m_Name: Node (151)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11009,7 +11024,7 @@ GameObject:
   - component: {fileID: 3619810739870558634}
   m_Layer: 0
   m_Name: Node (84)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11094,7 +11109,7 @@ GameObject:
   - component: {fileID: 8441286398510858417}
   m_Layer: 0
   m_Name: Node (22)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11453,7 +11468,7 @@ GameObject:
   - component: {fileID: 7151113936774415082}
   m_Layer: 0
   m_Name: Node (129)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11495,6 +11510,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4411524462620791645}
     m_Modifications:
+    - target: {fileID: 4705173961633590530, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
+      propertyPath: Shop
+      value: 
+      objectReference: {fileID: 2052242178}
+    - target: {fileID: 4705173961633590530, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
+      propertyPath: shop
+      value: 
+      objectReference: {fileID: 2052242183}
     - target: {fileID: 4705173961633590530, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
       propertyPath: nodes
       value: 
@@ -11583,6 +11606,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Node
       objectReference: {fileID: 0}
+    - target: {fileID: 8337766320601282638, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
+      propertyPath: m_TagString
+      value: Node
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11618,7 +11645,7 @@ GameObject:
   - component: {fileID: 8929057278698522134}
   m_Layer: 0
   m_Name: Node (179)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11724,7 +11751,7 @@ GameObject:
   - component: {fileID: 5870635126271862281}
   m_Layer: 0
   m_Name: Node (2)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11767,7 +11794,7 @@ GameObject:
   - component: {fileID: 7016666809943159745}
   m_Layer: 0
   m_Name: Node (90)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11951,7 +11978,7 @@ GameObject:
   - component: {fileID: 8221097167973070041}
   m_Layer: 0
   m_Name: Node (117)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12013,7 +12040,7 @@ GameObject:
   - component: {fileID: 7035451690091215412}
   m_Layer: 0
   m_Name: Node (15)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12176,7 +12203,7 @@ GameObject:
   - component: {fileID: 6718107203052710111}
   m_Layer: 0
   m_Name: Node (16)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12211,7 +12238,7 @@ GameObject:
   - component: {fileID: 8036347407216633392}
   m_Layer: 0
   m_Name: Node (108)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12338,7 +12365,7 @@ GameObject:
   - component: {fileID: 5790577286849211152}
   m_Layer: 0
   m_Name: Node (70)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12408,7 +12435,7 @@ GameObject:
   - component: {fileID: 8490167100313944076}
   m_Layer: 0
   m_Name: Node (149)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12543,7 +12570,7 @@ GameObject:
   - component: {fileID: 9211279363110471078}
   m_Layer: 0
   m_Name: Node (172)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12584,7 +12611,7 @@ GameObject:
   - component: {fileID: 9189374633745878319}
   m_Layer: 0
   m_Name: Node (159)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12604,7 +12631,7 @@ GameObject:
   - component: {fileID: 3490759821444093345}
   m_Layer: 0
   m_Name: Node (150)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12800,7 +12827,7 @@ GameObject:
   - component: {fileID: 8432557727130139570}
   m_Layer: 0
   m_Name: Node (131)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12891,7 +12918,7 @@ GameObject:
   - component: {fileID: 9077641286739125362}
   m_Layer: 0
   m_Name: Node (34)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13111,7 +13138,7 @@ GameObject:
   - component: {fileID: 7689626566935638495}
   m_Layer: 0
   m_Name: Node (184)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13330,7 +13357,7 @@ GameObject:
   - component: {fileID: 7009672609615769006}
   m_Layer: 0
   m_Name: Node (183)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13485,7 +13512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -13497,8 +13524,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &3005895062080354339
 Transform:
   m_ObjectHideFlags: 0
@@ -13559,7 +13589,7 @@ GameObject:
   - component: {fileID: 7321921029623747978}
   m_Layer: 0
   m_Name: Node (1)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13774,7 +13804,7 @@ GameObject:
   - component: {fileID: 7506471896665915237}
   m_Layer: 0
   m_Name: Node (62)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13836,7 +13866,7 @@ GameObject:
   - component: {fileID: 8773158435528273758}
   m_Layer: 0
   m_Name: Node (31)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14405,7 +14435,7 @@ GameObject:
   - component: {fileID: 6237530303482202632}
   m_Layer: 0
   m_Name: Node (61)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14425,7 +14455,7 @@ GameObject:
   - component: {fileID: 9181063183510609357}
   m_Layer: 0
   m_Name: Node (64)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14521,7 +14551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -14533,8 +14563,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3493083641721195588
 GameObject:
   m_ObjectHideFlags: 0
@@ -14550,7 +14583,7 @@ GameObject:
   - component: {fileID: 7265962559651665392}
   m_Layer: 0
   m_Name: Node (19)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14731,7 +14764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -14743,8 +14776,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &3619810739870558633
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14765,7 +14801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -14777,8 +14813,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &3622696566229295047
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14951,7 +14990,7 @@ GameObject:
   - component: {fileID: 8173407899996917146}
   m_Layer: 0
   m_Name: Node (73)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15015,7 +15054,7 @@ GameObject:
   - component: {fileID: 7780595937388443868}
   m_Layer: 0
   m_Name: Node (187)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15093,7 +15132,7 @@ GameObject:
   - component: {fileID: 5267692455013370799}
   m_Layer: 0
   m_Name: Node (113)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15155,7 +15194,7 @@ GameObject:
   - component: {fileID: 6933583405862166924}
   m_Layer: 0
   m_Name: Node (41)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15165,6 +15204,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7425691377898952009, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
   m_PrefabInstance: {fileID: 1769564793847826243}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3803044378103580364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4705173961633590530, guid: f47914ae2efaf6c46a7eac00d05b38b6, type: 3}
+  m_PrefabInstance: {fileID: 1769564793847826243}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &3805510478683788532
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15188,7 +15238,7 @@ GameObject:
   - component: {fileID: 7834711888767494042}
   m_Layer: 0
   m_Name: Node (109)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15497,7 +15547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -15509,8 +15559,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &3938573248913304115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15547,7 +15600,7 @@ GameObject:
   - component: {fileID: 8838898005156466641}
   m_Layer: 0
   m_Name: Node (140)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15567,7 +15620,7 @@ GameObject:
   - component: {fileID: 7713151064612759299}
   m_Layer: 0
   m_Name: Node (9)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15602,7 +15655,7 @@ GameObject:
   - component: {fileID: 7795303455640939738}
   m_Layer: 0
   m_Name: Node (118)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15679,7 +15732,7 @@ GameObject:
   - component: {fileID: 6617531787125324568}
   m_Layer: 0
   m_Name: Node (96)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15927,7 +15980,7 @@ GameObject:
   - component: {fileID: 4096841543285951367}
   m_Layer: 0
   m_Name: Node (165)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15944,7 +15997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -15956,8 +16009,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &4109466987068287860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15996,7 +16052,7 @@ GameObject:
   - component: {fileID: 8479900641562947356}
   m_Layer: 0
   m_Name: Node (135)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16174,7 +16230,7 @@ GameObject:
   - component: {fileID: 4645396260860635532}
   m_Layer: 0
   m_Name: Node (139)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16314,7 +16370,7 @@ GameObject:
   - component: {fileID: 8735992675346195827}
   m_Layer: 0
   m_Name: Node (35)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16686,7 +16742,7 @@ GameObject:
   - component: {fileID: 7114268968157318683}
   m_Layer: 0
   m_Name: Node (49)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16706,7 +16762,7 @@ GameObject:
   - component: {fileID: 7394835341381524194}
   m_Layer: 0
   m_Name: Node (102)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16726,7 +16782,7 @@ GameObject:
   - component: {fileID: 9179095323135049848}
   m_Layer: 0
   m_Name: Node (4)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16751,7 +16807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -16763,8 +16819,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &4439200139236059737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16960,7 +17019,7 @@ GameObject:
   - component: {fileID: 9002244361614842033}
   m_Layer: 0
   m_Name: Node (111)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17058,7 +17117,7 @@ GameObject:
   - component: {fileID: 6351363017015711356}
   m_Layer: 0
   m_Name: Node (173)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17078,7 +17137,7 @@ GameObject:
   - component: {fileID: 8385754475287392111}
   m_Layer: 0
   m_Name: Node (13)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17098,7 +17157,7 @@ GameObject:
   - component: {fileID: 4992000646236339953}
   m_Layer: 0
   m_Name: Node (58)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17207,7 +17266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -17219,8 +17278,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &4648479337860886946
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17366,7 +17428,7 @@ GameObject:
   - component: {fileID: 7181724177035408289}
   m_Layer: 0
   m_Name: Node (176)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17469,7 +17531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -17481,8 +17543,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &4837175244881661738
 GameObject:
   m_ObjectHideFlags: 0
@@ -17498,7 +17563,7 @@ GameObject:
   - component: {fileID: 7714429517436466139}
   m_Layer: 0
   m_Name: Node (92)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17664,7 +17729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -17676,8 +17741,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &4933021820284809730
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -17701,7 +17769,7 @@ GameObject:
   - component: {fileID: 8708961141451358488}
   m_Layer: 0
   m_Name: Node (7)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17790,7 +17858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -17802,8 +17870,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &4992123429733911607
 Transform:
   m_ObjectHideFlags: 0
@@ -17992,7 +18063,7 @@ GameObject:
   - component: {fileID: 9102869785578790501}
   m_Layer: 0
   m_Name: Node (85)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18012,7 +18083,7 @@ GameObject:
   - component: {fileID: 6701012182906703940}
   m_Layer: 0
   m_Name: Node (36)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18032,7 +18103,7 @@ GameObject:
   - component: {fileID: 8838830157493150642}
   m_Layer: 0
   m_Name: Node (26)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18134,7 +18205,7 @@ GameObject:
   - component: {fileID: 8034383150911233762}
   m_Layer: 0
   m_Name: Node (18)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18175,7 +18246,7 @@ GameObject:
   - component: {fileID: 7685940813016047688}
   m_Layer: 0
   m_Name: Node (68)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18272,7 +18343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -18284,8 +18355,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5272695329110707215
 GameObject:
   m_ObjectHideFlags: 0
@@ -18301,7 +18375,7 @@ GameObject:
   - component: {fileID: 6572157012435533199}
   m_Layer: 0
   m_Name: Node (38)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18394,7 +18468,7 @@ GameObject:
   - component: {fileID: 8703165908204907136}
   m_Layer: 0
   m_Name: Node (46)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18498,7 +18572,7 @@ GameObject:
   - component: {fileID: 6292542646735187877}
   m_Layer: 0
   m_Name: Node (95)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18554,7 +18628,7 @@ GameObject:
   - component: {fileID: 8862905963761399121}
   m_Layer: 0
   m_Name: Node (56)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18725,7 +18799,7 @@ GameObject:
   - component: {fileID: 5908645770974228105}
   m_Layer: 0
   m_Name: Node (103)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18823,7 +18897,7 @@ GameObject:
   - component: {fileID: 6858760170931682488}
   m_Layer: 0
   m_Name: Node (3)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18843,7 +18917,7 @@ GameObject:
   - component: {fileID: 8276454730466721019}
   m_Layer: 0
   m_Name: Node (175)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19007,7 +19081,7 @@ GameObject:
   - component: {fileID: 6139981142735646458}
   m_Layer: 0
   m_Name: Node (160)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19027,7 +19101,7 @@ GameObject:
   - component: {fileID: 9140081347211238693}
   m_Layer: 0
   m_Name: Node (83)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19229,7 +19303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19241,8 +19315,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &5821761836768527329
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19362,7 +19439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19374,8 +19451,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &5884056457944079134
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19399,7 +19479,7 @@ GameObject:
   - component: {fileID: 8864130167746670277}
   m_Layer: 0
   m_Name: Node (178)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19432,7 +19512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19444,8 +19524,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5941900685431106462
 GameObject:
   m_ObjectHideFlags: 0
@@ -19461,7 +19544,7 @@ GameObject:
   - component: {fileID: 7434432634854442487}
   m_Layer: 0
   m_Name: Node (27)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19517,7 +19600,7 @@ GameObject:
   - component: {fileID: 7363866575456146014}
   m_Layer: 0
   m_Name: Node (42)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19636,7 +19719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19648,8 +19731,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &6099044370437870860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19769,7 +19855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19781,8 +19867,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6139981142735646457
 Transform:
   m_ObjectHideFlags: 0
@@ -19810,7 +19899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -19822,8 +19911,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6158876452712087464
 GameObject:
   m_ObjectHideFlags: 0
@@ -19839,7 +19931,7 @@ GameObject:
   - component: {fileID: 8363098266493808723}
   m_Layer: 0
   m_Name: Node (91)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19859,7 +19951,7 @@ GameObject:
   - component: {fileID: 9104990389277052742}
   m_Layer: 0
   m_Name: Node (122)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19917,7 +20009,7 @@ GameObject:
   - component: {fileID: 9037787996971050963}
   m_Layer: 0
   m_Name: Node (143)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20002,7 +20094,7 @@ GameObject:
   - component: {fileID: 8551246897486999972}
   m_Layer: 0
   m_Name: Node (130)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20082,7 +20174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20094,8 +20186,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6252669778985612337
 Transform:
   m_ObjectHideFlags: 0
@@ -20139,7 +20234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20151,8 +20246,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &6292542646735187876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20207,7 +20305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20219,8 +20317,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &6300225371581935624
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20313,7 +20414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20325,8 +20426,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &6351363017015711355
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20381,7 +20485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20393,8 +20497,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6461234598054967710
 Transform:
   m_ObjectHideFlags: 0
@@ -20485,7 +20592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20497,8 +20604,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &6520162159372849444
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20569,7 +20679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20581,8 +20691,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6539023037532663480
 Transform:
   m_ObjectHideFlags: 0
@@ -20631,7 +20744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20643,8 +20756,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6574662402916911491
 GameObject:
   m_ObjectHideFlags: 0
@@ -20660,7 +20776,7 @@ GameObject:
   - component: {fileID: 6574662402916911492}
   m_Layer: 0
   m_Name: Node (144)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20677,7 +20793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20689,8 +20805,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6578789893819764488
 Transform:
   m_ObjectHideFlags: 0
@@ -20817,7 +20936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20829,8 +20948,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &6628411886634681199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20969,7 +21091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -20981,8 +21103,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &6701012182906703939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21016,7 +21141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21028,8 +21153,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &6708541264409531836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21071,7 +21199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21083,8 +21211,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &6724079647202241712
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21158,7 +21289,7 @@ GameObject:
   - component: {fileID: 9113487959752949539}
   m_Layer: 0
   m_Name: Node (81)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21186,7 +21317,7 @@ GameObject:
   - component: {fileID: 8937999198660992511}
   m_Layer: 0
   m_Name: Node (76)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21247,7 +21378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21259,8 +21390,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &6858760170931682487
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21315,7 +21449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21327,8 +21461,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6878943618576070161
 Transform:
   m_ObjectHideFlags: 0
@@ -21371,7 +21508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21383,8 +21520,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6882133983689841583
 GameObject:
   m_ObjectHideFlags: 0
@@ -21400,7 +21540,7 @@ GameObject:
   - component: {fileID: 8925771751209393230}
   m_Layer: 0
   m_Name: Node (14)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21438,7 +21578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21450,8 +21590,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &6933583405862166923
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21472,7 +21615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21484,8 +21627,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &6934122871452330757
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21676,7 +21822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21688,8 +21834,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7013478174378605024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21738,7 +21887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21750,8 +21899,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7031949358196895631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21808,7 +21960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21820,8 +21972,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7050028155166059619
 Transform:
   m_ObjectHideFlags: 0
@@ -21852,7 +22007,7 @@ GameObject:
   - component: {fileID: 7122739336691224659}
   m_Layer: 0
   m_Name: Node (47)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21877,7 +22032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21889,8 +22044,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7119323351376863604
 Transform:
   m_ObjectHideFlags: 0
@@ -21960,7 +22118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -21972,8 +22130,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7149936364357052932
 Transform:
   m_ObjectHideFlags: 0
@@ -22043,7 +22204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22055,8 +22216,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7153509480985528365
 Transform:
   m_ObjectHideFlags: 0
@@ -22084,7 +22248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22096,8 +22260,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7153655213515260757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22163,7 +22330,7 @@ GameObject:
   - component: {fileID: 7279351209693366528}
   m_Layer: 0
   m_Name: Node (124)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22195,7 +22362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22207,8 +22374,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7181282143041668699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22284,7 +22454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22296,8 +22466,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7221700322092310805
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22331,7 +22504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22343,8 +22516,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7221702435829401496
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22368,7 +22544,7 @@ GameObject:
   - component: {fileID: 8314819377649307485}
   m_Layer: 0
   m_Name: Node (127)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22388,7 +22564,7 @@ GameObject:
   - component: {fileID: 8580221160015983328}
   m_Layer: 0
   m_Name: Node (126)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22408,7 +22584,7 @@ GameObject:
   - component: {fileID: 8591616711860580622}
   m_Layer: 0
   m_Name: Node (86)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22433,7 +22609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22445,8 +22621,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7279351209693366527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22480,7 +22659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22492,8 +22671,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7298237339088494774
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22514,7 +22696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22526,8 +22708,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7299476293693518854
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22548,7 +22733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22560,8 +22745,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7308224087488853015
 Transform:
   m_ObjectHideFlags: 0
@@ -22625,7 +22813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22637,8 +22825,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7334214873374183418
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22662,7 +22853,7 @@ GameObject:
   - component: {fileID: 7338894672331969062}
   m_Layer: 0
   m_Name: Node (89)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22679,7 +22870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22691,8 +22882,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7363866575456146013
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22747,7 +22941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22759,8 +22953,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7366589966675796191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22815,7 +23012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22827,8 +23024,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7384184725853506824
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22904,7 +23104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22916,8 +23116,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7397099561912096744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22980,7 +23183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -22992,8 +23195,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7449511023586965284
 GameObject:
   m_ObjectHideFlags: 0
@@ -23009,7 +23215,7 @@ GameObject:
   - component: {fileID: 7859580689434143125}
   m_Layer: 0
   m_Name: Node (30)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23112,7 +23318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23124,8 +23330,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7510153830331296520
 GameObject:
   m_ObjectHideFlags: 0
@@ -23141,7 +23350,7 @@ GameObject:
   - component: {fileID: 9073476088619823741}
   m_Layer: 0
   m_Name: Node (17)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23161,7 +23370,7 @@ GameObject:
   - component: {fileID: 7515582562285868384}
   m_Layer: 0
   m_Name: Node (112)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23178,7 +23387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23190,8 +23399,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7515892926476985496
 GameObject:
   m_ObjectHideFlags: 0
@@ -23207,7 +23419,7 @@ GameObject:
   - component: {fileID: 7515892926476985497}
   m_Layer: 0
   m_Name: Node (156)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23224,7 +23436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23236,8 +23448,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7550016139624907371
 Transform:
   m_ObjectHideFlags: 0
@@ -23310,7 +23525,7 @@ GameObject:
   - component: {fileID: 7566954102891838183}
   m_Layer: 0
   m_Name: Node (44)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23327,7 +23542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23339,8 +23554,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7577553925217756401
 GameObject:
   m_ObjectHideFlags: 0
@@ -23356,7 +23574,7 @@ GameObject:
   - component: {fileID: 8415044828629638072}
   m_Layer: 0
   m_Name: Node (77)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23433,7 +23651,7 @@ GameObject:
   - component: {fileID: 7874903055356759662}
   m_Layer: 0
   m_Name: Node (138)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23453,7 +23671,7 @@ GameObject:
   - component: {fileID: 7630134809851128189}
   m_Layer: 0
   m_Name: Node (148)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23470,7 +23688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23482,8 +23700,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7653074118129572271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23520,7 +23741,7 @@ GameObject:
   - component: {fileID: 7683386611365343764}
   m_Layer: 0
   m_Name: Node (164)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23537,7 +23758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23549,8 +23770,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7685940813016047687
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23605,7 +23829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23617,8 +23841,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7689626566935638494
 Transform:
   m_ObjectHideFlags: 0
@@ -23646,7 +23873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23658,8 +23885,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7713151064612759298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23714,7 +23944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23726,8 +23956,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7714429517436466138
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23782,7 +24015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23794,8 +24027,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7728693884181346175
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23871,7 +24107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23883,8 +24119,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7785007578909044780
 Transform:
   m_ObjectHideFlags: 0
@@ -23933,7 +24172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -23945,8 +24184,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7812396304885650272
 Transform:
   m_ObjectHideFlags: 0
@@ -24039,7 +24281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24051,8 +24293,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &7852964284656483309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24149,7 +24394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24161,8 +24406,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &7874903055356759661
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24217,7 +24465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24229,8 +24477,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7911677833909304538
 GameObject:
   m_ObjectHideFlags: 0
@@ -24246,7 +24497,7 @@ GameObject:
   - component: {fileID: 7911677833909304539}
   m_Layer: 0
   m_Name: Node (43)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24263,7 +24514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24275,8 +24526,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7917651062976226072
 GameObject:
   m_ObjectHideFlags: 0
@@ -24292,7 +24546,7 @@ GameObject:
   - component: {fileID: 8867746190985833677}
   m_Layer: 0
   m_Name: Node (158)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24312,7 +24566,7 @@ GameObject:
   - component: {fileID: 7922423409635782709}
   m_Layer: 0
   m_Name: Node (152)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24329,7 +24583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24341,8 +24595,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7993121828950668136
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24405,7 +24662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24417,8 +24674,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8035510760140477122
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24460,7 +24720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24472,8 +24732,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8039719714423166580
 GameObject:
   m_ObjectHideFlags: 0
@@ -24489,7 +24752,7 @@ GameObject:
   - component: {fileID: 8662868964745214142}
   m_Layer: 0
   m_Name: Node (133)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24566,7 +24829,7 @@ GameObject:
   - component: {fileID: 8081313423964070884}
   m_Layer: 0
   m_Name: Node (120)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24583,7 +24846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24595,8 +24858,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8096748245730876215
 GameObject:
   m_ObjectHideFlags: 0
@@ -24612,7 +24878,7 @@ GameObject:
   - component: {fileID: 9140783769049946330}
   m_Layer: 0
   m_Name: Node (51)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24688,7 +24954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24700,8 +24966,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8187538599368677060
 GameObject:
   m_ObjectHideFlags: 0
@@ -24717,7 +24986,7 @@ GameObject:
   - component: {fileID: 8187538599368677061}
   m_Layer: 0
   m_Name: Node (191)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24734,7 +25003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24746,8 +25015,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8193627046322626163
 Transform:
   m_ObjectHideFlags: 0
@@ -24778,7 +25050,7 @@ GameObject:
   - component: {fileID: 8201984525694397464}
   m_Layer: 0
   m_Name: Node (80)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24795,7 +25067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24807,8 +25079,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8202327996885682825
 Transform:
   m_ObjectHideFlags: 0
@@ -24836,7 +25111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24848,8 +25123,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8202349009948571386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24886,7 +25164,7 @@ GameObject:
   - component: {fileID: 8202875520617666423}
   m_Layer: 0
   m_Name: Node (162)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24903,7 +25181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24915,8 +25193,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8221097167973070040
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24937,7 +25218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24949,8 +25230,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8223284039644103255
 GameObject:
   m_ObjectHideFlags: 0
@@ -24966,7 +25250,7 @@ GameObject:
   - component: {fileID: 8223284039644103256}
   m_Layer: 0
   m_Name: Node (180)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24983,7 +25267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -24995,8 +25279,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8274260879667016821
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25059,7 +25346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25071,8 +25358,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8306864116878075906
 GameObject:
   m_ObjectHideFlags: 0
@@ -25088,7 +25378,7 @@ GameObject:
   - component: {fileID: 8306864116878075907}
   m_Layer: 0
   m_Name: Node (12)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25105,7 +25395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25117,8 +25407,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8314819377649307484
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25139,7 +25432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25151,8 +25444,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8315075130959243611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25186,7 +25482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25198,8 +25494,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8332729835349165936
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25265,7 +25564,7 @@ GameObject:
   - component: {fileID: 8360020791854659261}
   m_Layer: 0
   m_Name: Node (32)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25282,7 +25581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25294,8 +25593,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8363098266493808722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25329,7 +25631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25341,8 +25643,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8368678940974493479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25379,7 +25684,7 @@ GameObject:
   - component: {fileID: 8378562309033507806}
   m_Layer: 0
   m_Name: Node (115)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25396,7 +25701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25408,8 +25713,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8385754475287392110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25464,7 +25772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25476,8 +25784,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8391222034274451539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25526,7 +25837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25538,8 +25849,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8432557727130139569
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25560,7 +25874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25572,8 +25886,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8439461257790307115
 Transform:
   m_ObjectHideFlags: 0
@@ -25609,7 +25926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25621,8 +25938,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8456615043919843903
 GameObject:
   m_ObjectHideFlags: 0
@@ -25638,7 +25958,7 @@ GameObject:
   - component: {fileID: 8456615043919843904}
   m_Layer: 0
   m_Name: Node (57)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25655,7 +25975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25667,8 +25987,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8472005079653385969
 Transform:
   m_ObjectHideFlags: 0
@@ -25704,7 +26027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25716,8 +26039,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8490167100313944075
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25738,7 +26064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25750,8 +26076,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8492795025644135918
 GameObject:
   m_ObjectHideFlags: 0
@@ -25767,7 +26096,7 @@ GameObject:
   - component: {fileID: 9151410176205873509}
   m_Layer: 0
   m_Name: Node (141)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25787,7 +26116,7 @@ GameObject:
   - component: {fileID: 8497976659030428243}
   m_Layer: 0
   m_Name: Node (142)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25804,7 +26133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25816,8 +26145,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8500170810249158164
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25875,7 +26207,7 @@ GameObject:
   - component: {fileID: 8503226693507691292}
   m_Layer: 0
   m_Name: Node (188)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25892,7 +26224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25904,8 +26236,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8551246897486999971
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25960,7 +26295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -25972,8 +26307,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8551657757759057434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26028,7 +26366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26040,8 +26378,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8555254488903046415
 GameObject:
   m_ObjectHideFlags: 0
@@ -26057,7 +26398,7 @@ GameObject:
   - component: {fileID: 8555254488903046416}
   m_Layer: 0
   m_Name: Node (60)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26074,7 +26415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26086,8 +26427,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8564796780164473364
 GameObject:
   m_ObjectHideFlags: 0
@@ -26103,7 +26447,7 @@ GameObject:
   - component: {fileID: 8564796780164473365}
   m_Layer: 0
   m_Name: Node (185)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26120,7 +26464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26132,8 +26476,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8570860330668464871
 GameObject:
   m_ObjectHideFlags: 0
@@ -26149,7 +26496,7 @@ GameObject:
   - component: {fileID: 8606200593548775812}
   m_Layer: 0
   m_Name: Node (66)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26208,7 +26555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26220,8 +26567,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8581072404636494775
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26257,7 +26607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26269,8 +26619,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8591616711860580621
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26325,7 +26678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26337,8 +26690,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8598822459984100159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26387,7 +26743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26399,8 +26755,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8632995623145071836
 GameObject:
   m_ObjectHideFlags: 0
@@ -26416,7 +26775,7 @@ GameObject:
   - component: {fileID: 9022800277945203215}
   m_Layer: 0
   m_Name: Node (189)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26436,7 +26795,7 @@ GameObject:
   - component: {fileID: 8728605773763102194}
   m_Layer: 0
   m_Name: Node (52)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26461,7 +26820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26473,8 +26832,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8680025416358500040
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26582,7 +26944,7 @@ GameObject:
   - component: {fileID: 9160955850136040887}
   m_Layer: 0
   m_Name: Node (186)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26614,7 +26976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26626,8 +26988,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8708961141451358487
 Transform:
   m_ObjectHideFlags: 0
@@ -26655,7 +27020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26667,8 +27032,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8728605773763102193
 Transform:
   m_ObjectHideFlags: 0
@@ -26696,7 +27064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26708,8 +27076,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8735992675346195826
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26730,7 +27101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26742,8 +27113,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8745110735805104373
 GameObject:
   m_ObjectHideFlags: 0
@@ -26759,7 +27133,7 @@ GameObject:
   - component: {fileID: 8745110735805104374}
   m_Layer: 0
   m_Name: Node (93)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26776,7 +27150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26788,8 +27162,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8773158435528273757
 Transform:
   m_ObjectHideFlags: 0
@@ -26817,7 +27194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26829,8 +27206,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8801891297612754970
 GameObject:
   m_ObjectHideFlags: 0
@@ -26846,7 +27226,7 @@ GameObject:
   - component: {fileID: 8801891297612754971}
   m_Layer: 0
   m_Name: Node (45)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26863,7 +27243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26875,8 +27255,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8802531260228645010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26939,7 +27322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26951,8 +27334,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8816106676646859273
 GameObject:
   m_ObjectHideFlags: 0
@@ -26968,7 +27354,7 @@ GameObject:
   - component: {fileID: 8816106676646859274}
   m_Layer: 0
   m_Name: Node (20)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26985,7 +27371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -26997,8 +27383,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8837705045727441312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27074,7 +27463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27086,8 +27475,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8838898005156466640
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27142,7 +27534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27154,8 +27546,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8862905963761399120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27210,7 +27605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27222,8 +27617,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8864130167746670276
 Transform:
   m_ObjectHideFlags: 0
@@ -27251,7 +27649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27263,8 +27661,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8867746190985833676
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27285,7 +27686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27297,8 +27698,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8877605021412855933
 GameObject:
   m_ObjectHideFlags: 0
@@ -27314,7 +27718,7 @@ GameObject:
   - component: {fileID: 8877605021412855934}
   m_Layer: 0
   m_Name: Node (82)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27331,7 +27735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27343,8 +27747,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8885026262754005583
 GameObject:
   m_ObjectHideFlags: 0
@@ -27360,7 +27767,7 @@ GameObject:
   - component: {fileID: 8885026262754005584}
   m_Layer: 0
   m_Name: Node (50)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27377,7 +27784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27389,8 +27796,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8906966459613641122
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27411,7 +27821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27423,8 +27833,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8925771751209393229
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27479,7 +27892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27491,8 +27904,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8929057278698522133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27526,7 +27942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27538,8 +27954,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8929199483232709822
 GameObject:
   m_ObjectHideFlags: 0
@@ -27555,7 +27974,7 @@ GameObject:
   - component: {fileID: 8992927084391434580}
   m_Layer: 0
   m_Name: Node (88)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27575,7 +27994,7 @@ GameObject:
   - component: {fileID: 8931546558365865339}
   m_Layer: 0
   m_Name: Node (59)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27592,7 +28011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27604,8 +28023,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &8937999198660992510
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27660,7 +28082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27672,8 +28094,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8948431914551195362
 GameObject:
   m_ObjectHideFlags: 0
@@ -27689,7 +28114,7 @@ GameObject:
   - component: {fileID: 8948431914551195363}
   m_Layer: 0
   m_Name: Node (134)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27706,7 +28131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27718,8 +28143,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8992927084391434579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27753,7 +28181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27765,8 +28193,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &8993350081641250343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27800,7 +28231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27812,8 +28243,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &8999962895452970417
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27849,7 +28283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27861,8 +28295,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9014571875322365383
 GameObject:
   m_ObjectHideFlags: 0
@@ -27878,7 +28315,7 @@ GameObject:
   - component: {fileID: 9014571875322365384}
   m_Layer: 0
   m_Name: Node (48)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27895,7 +28332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27907,8 +28344,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &9016496216736610556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27963,7 +28403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -27975,8 +28415,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &9022800277945203214
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -27997,7 +28440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28009,8 +28452,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &9037787996971050962
 Transform:
   m_ObjectHideFlags: 0
@@ -28038,7 +28484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28050,8 +28496,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &9073476088619823740
 Transform:
   m_ObjectHideFlags: 0
@@ -28079,7 +28528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28091,8 +28540,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &9077641286739125361
 Transform:
   m_ObjectHideFlags: 0
@@ -28120,7 +28572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28132,8 +28584,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9082505721877333229
 GameObject:
   m_ObjectHideFlags: 0
@@ -28149,7 +28604,7 @@ GameObject:
   - component: {fileID: 9082505721877333230}
   m_Layer: 0
   m_Name: Node (125)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28166,7 +28621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28178,8 +28633,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &9102869785578790500
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28200,7 +28658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28212,8 +28670,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &9104990389277052741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28247,7 +28708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28259,8 +28720,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9105860991720364973
 GameObject:
   m_ObjectHideFlags: 0
@@ -28276,7 +28740,7 @@ GameObject:
   - component: {fileID: 9105860991720364974}
   m_Layer: 0
   m_Name: Node (177)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28293,7 +28757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28305,8 +28769,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &9113487959752949538
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28327,7 +28794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28339,8 +28806,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &9140081347211238692
 Transform:
   m_ObjectHideFlags: 0
@@ -28368,7 +28838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28380,8 +28850,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &9140783769049946329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28415,7 +28888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28427,8 +28900,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9143828090002237644
 GameObject:
   m_ObjectHideFlags: 0
@@ -28444,7 +28920,7 @@ GameObject:
   - component: {fileID: 9143828090002237645}
   m_Layer: 0
   m_Name: Node (132)
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28461,7 +28937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28473,8 +28949,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &9151410176205873508
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28529,7 +29008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28541,8 +29020,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &9160955850136040886
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28563,7 +29045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28575,8 +29057,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &9179095323135049847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28597,7 +29082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28609,8 +29094,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &9181063183510609356
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28665,7 +29153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28677,8 +29165,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &9189374633745878318
 Transform:
   m_ObjectHideFlags: 0
@@ -28706,7 +29197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28718,8 +29209,11 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &9211279363110471077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28774,7 +29268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: {fileID: 4440424225227755438}
+  shop: {fileID: 2052242183}
   noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
   hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
   positionOffset: {x: 0, y: 0.5, z: 0}
@@ -28786,5 +29280,8 @@ MonoBehaviour:
     upgradedTwoPrefab: {fileID: 0}
     upgradedThreePrefab: {fileID: 0}
     upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
   numOfUpgrades: 0
-  isUpgraded: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}

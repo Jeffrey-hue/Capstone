@@ -5,7 +5,6 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
-    public GameObject nodes;
 
     void Awake ()
     {   
@@ -28,7 +27,6 @@ public class BuildManager : MonoBehaviour
 
     public bool CanBuild {get {return this.turretToBuild.prefab != null;}}
     public bool HasMoney {get {return PlayerStats.Money >= turretToBuild.cost;}}
-
     public void SelectNode (Node node)
     {
         if(selectedNode == node)
@@ -45,7 +43,6 @@ public class BuildManager : MonoBehaviour
     {
         selectedNode = null;
         nodeUI.Hide();
-        nodes.SetActive(true);
     }
     public void SelectTurretToBuild (TowerBlueprint turret)
     {

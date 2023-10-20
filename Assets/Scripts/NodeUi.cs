@@ -19,7 +19,11 @@ public class NodeUi : MonoBehaviour
         transform.position = target.GetBuildPosition();
 
         upgradeCost.text = "$" + target.towerBlueprint.upgradeCost;
-        if (target.towerBlueprint.upgradeCost == 0){
+        if(target.numOfUpgrades == 0)
+        {
+            target.towerBlueprint.fullyUpgraded = false;
+        }
+        if (target.towerBlueprint.fullyUpgraded == true){
             upgradeCost.text = "MAXED";
             upgradeButton.interactable = false;
         } else

@@ -8,7 +8,7 @@ public class WinLevel : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     public string levelIndex;
-    public int levelToUnlock = 2;
+    public int levelToUnlock;
 
     public void Menu ()
     {
