@@ -2423,6 +2423,7 @@ MonoBehaviour:
   WaveTimer: {fileID: 1150404781}
   spawnPoint: {fileID: 1394782277}
   Strtbuttn: {fileID: 615683222}
+  value: 150
   WaveTime: 2
   gameManager: {fileID: 618968910}
 --- !u!4 &618968907
@@ -8000,7 +8001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Luffy:
     prefab: {fileID: 7882976801231643994, guid: 9369a205ba6db024d96c7a54f6c0f643, type: 3}
-    cost: 100
+    cost: 250
     upgradedPrefab: {fileID: 7882976801231643994, guid: 2f76575fd0bcc76479831adc478bb3e2, type: 3}
     upgradedTwoPrefab: {fileID: 7882976801231643994, guid: fe85713d996c6064bbcc0d6458a96299, type: 3}
     upgradedThreePrefab: {fileID: 7882976801231643994, guid: e75413c78a4e2a741a0dfa528f545197, type: 3}
@@ -8009,7 +8010,7 @@ MonoBehaviour:
     fullyUpgraded: 0
   Zoro:
     prefab: {fileID: 5898878937593585125, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
-    cost: 100
+    cost: 1000
     upgradedPrefab: {fileID: 5898878937593585125, guid: 30894ec778feb1e46844c20d15a594dc, type: 3}
     upgradedTwoPrefab: {fileID: 5898878937593585125, guid: 11587293b17b3ed45bb7a986dd060e6a, type: 3}
     upgradedThreePrefab: {fileID: 5898878937593585125, guid: 9aae849763379e94e82432d60e16ac5a, type: 3}
@@ -8018,7 +8019,7 @@ MonoBehaviour:
     fullyUpgraded: 0
   Chopper:
     prefab: {fileID: 2975027406246432002, guid: 48a9c682a6ed3af45a2fc188a654cf4f, type: 3}
-    cost: 100
+    cost: 1250
     upgradedPrefab: {fileID: 2975027406246432002, guid: d969892a35e1bb84382f54931ff3dd91, type: 3}
     upgradedTwoPrefab: {fileID: 2975027406246432002, guid: 9eac62a49cfeb394e86ea659a78bc704, type: 3}
     upgradedThreePrefab: {fileID: 2975027406246432002, guid: 4a0f3137532842648be428d37dbcd067, type: 3}
@@ -8027,7 +8028,7 @@ MonoBehaviour:
     fullyUpgraded: 0
   Robin:
     prefab: {fileID: 7464646948071341146, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
-    cost: 100
+    cost: 1100
     upgradedPrefab: {fileID: 7464646948071341146, guid: 10175085f9dc6b8439419608d0ae42c1, type: 3}
     upgradedTwoPrefab: {fileID: 7464646948071341146, guid: ee5783b0d4b5382438ab6f99e4383b74, type: 3}
     upgradedThreePrefab: {fileID: 7464646948071341146, guid: 6a0ae7ac808f94147b24035bf1831ac2, type: 3}
@@ -8036,7 +8037,7 @@ MonoBehaviour:
     fullyUpgraded: 0
   Uta:
     prefab: {fileID: 4756911637432057019, guid: b0dd5448139acef4c851fd382a7ac7a2, type: 3}
-    cost: 100
+    cost: 1500
     upgradedPrefab: {fileID: 4756911637432057019, guid: 7e1705fb699987344a6f6dcdde6c7fba, type: 3}
     upgradedTwoPrefab: {fileID: 4756911637432057019, guid: 1d6d1d399d0a28b41bdf95835c9c66d8, type: 3}
     upgradedThreePrefab: {fileID: 4756911637432057019, guid: afe541bab6100884a832be7b378243a3, type: 3}
@@ -8045,7 +8046,6 @@ MonoBehaviour:
     fullyUpgraded: 0
   nodes: {fileID: 3803044378103580364}
   hideNodes: 1
-  invis: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2086193476
 GameObject:
   m_ObjectHideFlags: 0

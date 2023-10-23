@@ -10,6 +10,7 @@ public class WaveSpawner : MonoBehaviour
   public TextMeshProUGUI WaveTimer;
   public Transform spawnPoint;
   public GameObject Strtbuttn;
+  public int value = 150;
 
   public float WaveTime = 10f;
   private float countdown = 0f;

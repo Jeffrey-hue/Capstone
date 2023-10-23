@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6995548406827103471
 MeshFilter:
@@ -123,6 +123,9 @@ MonoBehaviour:
   ExplosionRadius: 0
   impactEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   damage: 25
+  slow: 1
+  slowAmount: 0.2
+  slowTime: 2
 --- !u!95 &2262445173170930264
 Animator:
   serializedVersion: 5

@@ -17,8 +17,6 @@ public class Tower : MonoBehaviour
     public Transform partToRotate;
     public GameObject bulletPrefab;
     public Transform firepoint;
-    public bool slow;
-    public float slowPct = .5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,21 +49,27 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireCountDown -= Time.deltaTime;
         if(target == null)
         {
             return;
         }
-        Vector3 dir = target.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,Time.deltaTime * turnSpeed).eulerAngles;
-        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        LockOnTarget();
 
         if(fireCountDown <= 0f)
         {
             Shoot();
             fireCountDown = 1f / fireRate;
         }
+        fireCountDown -= Time.deltaTime;
+    }
+
+    void LockOnTarget()
+    {
+        Vector3 dir = target.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation,lookRotation,Time.deltaTime * turnSpeed).eulerAngles;
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void Shoot ()

@@ -9,6 +9,9 @@ public class Projectile : MonoBehaviour
     public GameObject impactEffect;
 
     public int damage = 50;
+    public bool slow;
+    public float slowAmount = .2f;
+    public float slowTime = 2f;
     public void Seek(Transform _target)
     {
         targetPosition= _target.position;
@@ -27,6 +30,11 @@ public class Projectile : MonoBehaviour
         if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
+            if(slow == true)
+            {
+                Debug.Log("uh");
+                Slow(Target);
+            }
             return;
         }
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
@@ -56,6 +64,15 @@ public class Projectile : MonoBehaviour
             {
                 Damage(collider.transform);
             }
+        }
+    }
+
+    void Slow (Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+        if (e != null)
+        {
+            e.Slow(slowAmount, slowTime);
         }
     }
 
