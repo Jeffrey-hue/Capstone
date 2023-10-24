@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    public WaveSpawner waves;
     public static bool gameEnded;
     public GameObject gameOverUI;
     public GameObject WinUI;
@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     void Start ()
     {
         gameEnded = false;
+        waves.enabled = true;
     }
     // Update is called once per frame
     void Update()
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
         }
         if (PlayerStats.Lives <= 0)
         {
+            waves.enabled = false;
             EndGame();
         }
     }

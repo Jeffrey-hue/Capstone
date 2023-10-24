@@ -17,12 +17,13 @@ public class Node : MonoBehaviour
     public Color startColor;
     BuildManager buildManager;
 
-    void Awake ()
+    /*void Awake ()
     {
-        buildManager = BuildManager.instance;
-    }
+        //buildManager = BuildManager.instance;
+    }*/
     void Start()
     {
+        buildManager = BuildManager.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
     }
@@ -30,19 +31,22 @@ public class Node : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
+            Debug.Log("hshshs");
             return;
         }
 
         if (turret != null)
         {
+            Debug.Log("hshshs");
             buildManager.SelectNode(this);
             return;
         }
 
-        //if (!buildManager.CanBuild)
-        //{
-            //return;
-        //}
+        if (!buildManager.CanBuild)
+        {
+            Debug.Log("hshshs");
+            return;
+        }
 
         BuildTurret(buildManager.GetTurretToBuild());
     }
@@ -122,8 +126,13 @@ public class Node : MonoBehaviour
         //{  
             //return;
         //}
+        if (buildManager.HasMoney == null)
+        {
+            Debug.Log("why?");
+        }
         if (buildManager.HasMoney)
         {
+            Debug.Log("ha");
             rend.material.color = hoverColor;
         }
         else

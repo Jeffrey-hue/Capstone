@@ -13,18 +13,31 @@ public class WaveSpawner : MonoBehaviour
   public int value = 150;
 
   public float WaveTime = 10f;
-  private float countdown = 0f;
-  private int waveIndex = 0;
-  private bool srtGame;
+  public float countdown = 0f;
+  public int waveIndex = 0;
+  public bool srtGame;
   public GameManager gameManager;
 
+  void Awake()
+  {
+    srtGame = false;
+    this.enabled = true;
+    waveIndex = 0;
+    EnemiesAlive = 0;
+  }
 
   void Start()
   {
+    Debug.Log("I hate this game");
     srtGame = false;
+    this.enabled = true;
+    waveIndex = 0;
   }
   void Update ()
   {
+    if(this.enabled == false){
+      Debug.Log("I hate this game");
+    }
     if (EnemiesAlive > 0)
     {
       return;
@@ -37,6 +50,7 @@ public class WaveSpawner : MonoBehaviour
     if(srtGame == true){
       if (countdown <= 0)
       {
+          Debug.Log("I hate this game");
           StartCoroutine(SpawnWave());
           countdown = WaveTime;
           return;
