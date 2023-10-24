@@ -13,7 +13,6 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        levelIndex = "Level1";
         StartCoroutine(Load(levelIndex));
     }
     public void Menu()

@@ -42,7 +42,7 @@ public class WaveSpawner : MonoBehaviour
           return;
       }
       countdown -= Time.deltaTime;
-
+      PlayerStats.Money += value;
       WaveTimer.text = Mathf.Round(countdown).ToString();
     }
   }

@@ -39,10 +39,10 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild)
-        {
-            return;
-        }
+        //if (!buildManager.CanBuild)
+        //{
+            //return;
+        //}
 
         BuildTurret(buildManager.GetTurretToBuild());
     }
@@ -118,10 +118,10 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild == null)
-        {  
-            return;
-        }
+        //if (!buildManager.CanBuild == null)
+        //{  
+            //return;
+        //}
         if (buildManager.HasMoney)
         {
             rend.material.color = hoverColor;

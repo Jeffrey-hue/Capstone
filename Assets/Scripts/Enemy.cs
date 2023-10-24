@@ -36,7 +36,6 @@ public class Enemy : MonoBehaviour
         slowTime = time;
         if (slowTime > 0)
         {
-            Debug.Log("GRRRR");
             speed = Startspeed * (1f - amount);
         }
     } 
