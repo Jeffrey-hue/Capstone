@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6515863519709709246}
   - component: {fileID: 6320239173417801441}
   m_Layer: 0
-  m_Name: tracker (Zoro)
+  m_Name: tracker (Zoro) 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

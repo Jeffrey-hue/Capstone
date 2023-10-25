@@ -391,10 +391,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  Startspeed: 10
-  startHealth: 200
+  Startspeed: 5
+  startHealth: 500
   health: 0
-  value: 50
+  value: 1000
   healthbar: {fileID: 1951422003252350000}
   slowTime: 2
 --- !u!114 &5755614188613069714

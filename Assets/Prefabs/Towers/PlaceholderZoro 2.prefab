@@ -9162,7 +9162,7 @@ Transform:
   - {fileID: 4908043169530164006}
   - {fileID: 2575857759101162432}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6022755660973580605
 Animator:
@@ -9203,10 +9203,8 @@ MonoBehaviour:
   fireCountDown: 0
   enemyTag: Enemy
   partToRotate: {fileID: 6480394266686755367}
-  bulletPrefab: {fileID: 7650775292281265100, guid: 89af63e538b498147bdd1d8312692b73, type: 3}
+  bulletPrefab: {fileID: 7650775292281265100, guid: 32bf7adfa4a406e47b55f568c997d2ba, type: 3}
   firepoint: {fileID: 2575857759101162432}
-  slow: 0
-  slowPct: 0
 --- !u!1 &5918101825499409045
 GameObject:
   m_ObjectHideFlags: 0

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3602077505202862997}
   - component: {fileID: 6531248677399945332}
   m_Layer: 0
-  m_Name: utashootmodel
+  m_Name: utashootmodel 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

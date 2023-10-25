@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     public float turnSpeed = 10f;
     public float range = 10f;
     public float fireRate = 1f;
-    public float fireCountDown = 0f;
+    public float fireCountDown;
 
     [Header("Unity Setup")]
     public string enemyTag = "Enemy";
@@ -20,6 +20,7 @@ public class Tower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        fireCountDown -= Time.deltaTime;
         InvokeRepeating ("UpdateTarget", 0f, 0.5f);
     }
 
@@ -49,19 +50,25 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (fireCountDown > 0)
+        {
+            fireCountDown -= Time.deltaTime;
+        }
         if(target == null)
         {
             return;
         }
-
         LockOnTarget();
-
-        if(fireCountDown <= 0f)
+        if (fireCountDown <= 0)
         {
             Shoot();
-            fireCountDown = 1f / fireRate;
+            fireCountDown += fireRate;
         }
-        fireCountDown -= Time.deltaTime;
+        if (fireCountDown < 0)
+        {
+            Debug.Log("what");
+            fireCountDown = 0;
+        }
     }
 
     void LockOnTarget()

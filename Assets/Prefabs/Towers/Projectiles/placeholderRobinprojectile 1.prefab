@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7650775292281265100
+--- !u!1 &5775855775899583445
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7126599271678633065}
-  - component: {fileID: 2155898618171334680}
-  - component: {fileID: 6423361692892742460}
-  - component: {fileID: 6515863519709709246}
-  - component: {fileID: 6320239173417801441}
+  - component: {fileID: 724957740836648957}
+  - component: {fileID: 6995548406827103471}
+  - component: {fileID: 4741866359309668081}
+  - component: {fileID: 1743166075682334815}
+  - component: {fileID: 1216884107297997663}
+  - component: {fileID: 2262445173170930264}
   m_Layer: 0
-  m_Name: tracker (Zoro)
+  m_Name: placeholderRobinprojectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7126599271678633065
+--- !u!4 &724957740836648957
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7650775292281265100}
+  m_GameObject: {fileID: 5775855775899583445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.992947, y: 4.418318, z: 62.751152}
-  m_LocalScale: {x: -0.0010389633, y: -0.0010389633, z: -0.0010389633}
+  m_LocalPosition: {x: 37.89497, y: 1.6, z: 60.20018}
+  m_LocalScale: {x: 0.2029106, y: 0.2029106, z: 2.1586685}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2155898618171334680
+--- !u!33 &6995548406827103471
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7650775292281265100}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6423361692892742460
+  m_GameObject: {fileID: 5775855775899583445}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4741866359309668081
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7650775292281265100}
+  m_GameObject: {fileID: 5775855775899583445}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &6515863519709709246
-SphereCollider:
+--- !u!65 &1743166075682334815
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7650775292281265100}
+  m_GameObject: {fileID: 5775855775899583445}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -104,24 +105,45 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6320239173417801441
+--- !u!114 &1216884107297997663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7650775292281265100}
+  m_GameObject: {fileID: 5775855775899583445}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3468eee8388edaf4c95bf43969d2def4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 7846542494906076140, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
-  speed: 100
+  tower: {fileID: 400803647725122678, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
+  speed: 70
   ExplosionRadius: 0
-  impactEffect: {fileID: 2955623459812423943, guid: 2e673bd15dc8ec4448125b0c4446c38f, type: 3}
-  slow: 0
+  impactEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
+  slow: 1
   slowAmount: 0.2
   slowTime: 2
+--- !u!95 &2262445173170930264
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775855775899583445}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a3a778ad25c1c145960a3703b06636f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

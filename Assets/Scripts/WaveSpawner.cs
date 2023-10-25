@@ -28,7 +28,6 @@ public class WaveSpawner : MonoBehaviour
 
   void Start()
   {
-    Debug.Log("I hate this game");
     srtGame = false;
     this.enabled = true;
     waveIndex = 0;
@@ -36,7 +35,6 @@ public class WaveSpawner : MonoBehaviour
   void Update ()
   {
     if(this.enabled == false){
-      Debug.Log("I hate this game");
     }
     if (EnemiesAlive > 0)
     {
@@ -50,7 +48,6 @@ public class WaveSpawner : MonoBehaviour
     if(srtGame == true){
       if (countdown <= 0)
       {
-          Debug.Log("I hate this game");
           StartCoroutine(SpawnWave());
           countdown = WaveTime;
           return;

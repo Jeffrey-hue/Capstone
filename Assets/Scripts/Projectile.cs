@@ -7,11 +7,10 @@ public class Projectile : MonoBehaviour
     public float speed = 70f;
     public float ExplosionRadius = 0f;
     public GameObject impactEffect;
-
-    public int damage = 50;
     public bool slow;
     public float slowAmount = .2f;
     public float slowTime = 2f;
+    public int damage;
     public void Seek(Transform _target)
     {
         targetPosition= _target.position;

@@ -11383,6 +11383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08998774b97c1747b4da194fed5e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 150
   turnSpeed: 10
   range: 10
   fireRate: 1
@@ -11391,8 +11392,6 @@ MonoBehaviour:
   partToRotate: {fileID: 1581494356312914055}
   bulletPrefab: {fileID: 202033295009574406, guid: ce1b8fa7704b1b44e9f1fce0c442778e, type: 3}
   firepoint: {fileID: 2545368701153291374}
-  slow: 0
-  slowPct: 0
 --- !u!1 &7923966839943935285
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3566932989508585835}
   - component: {fileID: 2149736945265932180}
   m_Layer: 0
-  m_Name: TempChopProj
+  m_Name: TempChopProj 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   slow: 0
   slowAmount: 0.5
   slowTime: 2
-  damage: 50
+  damage: 180
 --- !u!95 &2149736945265932180
 Animator:
   serializedVersion: 5

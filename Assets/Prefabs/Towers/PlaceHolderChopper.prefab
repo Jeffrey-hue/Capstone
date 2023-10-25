@@ -6550,7 +6550,7 @@ Transform:
   - {fileID: 6884538669941913016}
   - {fileID: 1057726236291133321}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4814889616441981164
 MonoBehaviour:
@@ -6564,9 +6564,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08998774b97c1747b4da194fed5e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
   turnSpeed: 10
   range: 10
-  fireRate: 1
+  fireRate: 2
   fireCountDown: 0
   enemyTag: Enemy
   partToRotate: {fileID: 2013008383938520375}
