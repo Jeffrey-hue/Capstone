@@ -65,6 +65,10 @@ public class Node : MonoBehaviour
 
     public void UpgradeTurret ()
     {
+        if (numOfUpgrades == 0)
+        {
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 1;
+        }
         if (PlayerStats.Money < towerBlueprint.upgradeCost)
         {
             Debug.Log("Add Notif to player. Upgrade");
@@ -95,8 +99,9 @@ public class Node : MonoBehaviour
             GameObject _turret = (GameObject)Instantiate(towerBlueprint.upgradedThreePrefab, GetBuildPosition(), Quaternion.identity);
             turret = _turret;
             Debug.Log("Turret built money left: " + PlayerStats.Money);
-            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 1;
             towerBlueprint.fullyUpgraded = true;
+            towerBlueprint.upgradeCost = towerBlueprint.upgradeCost * 1;
+            Debug.Log("Fully Upgraded");
         }
         if (numOfUpgrades >= 4){
             Debug.Log("Fully Upgraded");

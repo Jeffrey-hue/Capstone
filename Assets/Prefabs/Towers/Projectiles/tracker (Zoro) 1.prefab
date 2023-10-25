@@ -118,10 +118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3468eee8388edaf4c95bf43969d2def4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 7846542494906076140, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
   speed: 100
   ExplosionRadius: 0
   impactEffect: {fileID: 2955623459812423943, guid: 2e673bd15dc8ec4448125b0c4446c38f, type: 3}
   slow: 0
+  bleed: 1
   slowAmount: 0.2
   slowTime: 2
+  bleedAmount: 4
+  bleedTime: 0.5
+  damage: 15

@@ -9162,7 +9162,7 @@ Transform:
   - {fileID: 4908043169530164006}
   - {fileID: 2575857759101162432}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6022755660973580605
 Animator:
@@ -9198,7 +9198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 20
-  range: 5.45
+  range: 7.22
   fireRate: 1
   fireCountDown: 0
   enemyTag: Enemy

@@ -160,10 +160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3468eee8388edaf4c95bf43969d2def4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 1547685015545159586, guid: b0dd5448139acef4c851fd382a7ac7a2, type: 3}
   speed: 140
   ExplosionRadius: 0
   impactEffect: {fileID: 8443315704496310910, guid: 6ef35fa36e3a65043b2d800600204bdd, type: 3}
   slow: 0
   slowAmount: 0.2
   slowTime: 2
+  damage: 26

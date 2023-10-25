@@ -8018,8 +8018,8 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 5898878937593585125, guid: 30894ec778feb1e46844c20d15a594dc, type: 3}
     upgradedTwoPrefab: {fileID: 5898878937593585125, guid: 11587293b17b3ed45bb7a986dd060e6a, type: 3}
     upgradedThreePrefab: {fileID: 5898878937593585125, guid: 9aae849763379e94e82432d60e16ac5a, type: 3}
-    upgradeCost: 100
-    startUpgradeCost: 100
+    upgradeCost: 150
+    startUpgradeCost: 250
     fullyUpgraded: 0
   Chopper:
     prefab: {fileID: 2975027406246432002, guid: 48a9c682a6ed3af45a2fc188a654cf4f, type: 3}
@@ -8027,8 +8027,8 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 2975027406246432002, guid: d969892a35e1bb84382f54931ff3dd91, type: 3}
     upgradedTwoPrefab: {fileID: 2975027406246432002, guid: 9eac62a49cfeb394e86ea659a78bc704, type: 3}
     upgradedThreePrefab: {fileID: 2975027406246432002, guid: 4a0f3137532842648be428d37dbcd067, type: 3}
-    upgradeCost: 100
-    startUpgradeCost: 100
+    upgradeCost: 200
+    startUpgradeCost: 150
     fullyUpgraded: 0
   Robin:
     prefab: {fileID: 7464646948071341146, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
@@ -8036,8 +8036,8 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 7464646948071341146, guid: 10175085f9dc6b8439419608d0ae42c1, type: 3}
     upgradedTwoPrefab: {fileID: 7464646948071341146, guid: ee5783b0d4b5382438ab6f99e4383b74, type: 3}
     upgradedThreePrefab: {fileID: 7464646948071341146, guid: 6a0ae7ac808f94147b24035bf1831ac2, type: 3}
-    upgradeCost: 100
-    startUpgradeCost: 100
+    upgradeCost: 125
+    startUpgradeCost: 300
     fullyUpgraded: 0
   Uta:
     prefab: {fileID: 4756911637432057019, guid: b0dd5448139acef4c851fd382a7ac7a2, type: 3}
@@ -8045,8 +8045,8 @@ MonoBehaviour:
     upgradedPrefab: {fileID: 4756911637432057019, guid: 7e1705fb699987344a6f6dcdde6c7fba, type: 3}
     upgradedTwoPrefab: {fileID: 4756911637432057019, guid: 1d6d1d399d0a28b41bdf95835c9c66d8, type: 3}
     upgradedThreePrefab: {fileID: 4756911637432057019, guid: afe541bab6100884a832be7b378243a3, type: 3}
-    upgradeCost: 100
-    startUpgradeCost: 100
+    upgradeCost: 250
+    startUpgradeCost: 400
     fullyUpgraded: 0
   nodes: {fileID: 3803044378103580364}
   hideNodes: 1

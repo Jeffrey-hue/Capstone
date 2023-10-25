@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3468eee8388edaf4c95bf43969d2def4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 3721367777157458758, guid: 9369a205ba6db024d96c7a54f6c0f643, type: 3}
   speed: 70
   ExplosionRadius: 0
   impactEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   slow: 0
   slowAmount: 0.5
   slowTime: 2
+  damage: 75

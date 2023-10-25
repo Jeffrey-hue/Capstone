@@ -119,13 +119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3468eee8388edaf4c95bf43969d2def4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: {fileID: 400803647725122678, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
   speed: 70
   ExplosionRadius: 0
   impactEffect: {fileID: 7226583673155636401, guid: a2ab56839e1c9504ea9d141e95d0b16b, type: 3}
   slow: 1
   slowAmount: 0.2
   slowTime: 2
+  damage: 30
 --- !u!95 &2262445173170930264
 Animator:
   serializedVersion: 5

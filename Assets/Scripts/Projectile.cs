@@ -8,16 +8,17 @@ public class Projectile : MonoBehaviour
     public float ExplosionRadius = 0f;
     public GameObject impactEffect;
     public bool slow;
+    public bool bleed;
     public float slowAmount = .2f;
     public float slowTime = 2f;
+    public float bleedAmount = 2f;
+    public float bleedTime = .5f;
     public int damage;
     public void Seek(Transform _target)
     {
         targetPosition= _target.position;
         Target = _target;
     }
- // Update is called once per frame
-
  void Update ()
     {
         if(Target == null){
@@ -33,6 +34,11 @@ public class Projectile : MonoBehaviour
             {
                 Debug.Log("uh");
                 Slow(Target);
+            }
+            if(bleed == true)
+            {
+                Debug.Log("ouch");
+                Bleed(Target);
             }
             return;
         }
@@ -75,10 +81,18 @@ public class Projectile : MonoBehaviour
         }
     }
 
+    void Bleed (Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+        if (e != null)
+        {
+            e.Bleed(bleedAmount, bleedTime);
+        }
+    }
+
     void Damage (Transform enemy)
     {
         Enemy e = enemy.GetComponent<Enemy>();
-
         if (e != null)
         {
             e.TakeDamage(damage);
