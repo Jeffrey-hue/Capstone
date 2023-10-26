@@ -9,6 +9,8 @@ public class WinLevel : MonoBehaviour
     public float transitionTime = 1f;
     public string levelIndex;
     public int levelToUnlock;
+    public WaveSpawner wave;
+    public GameObject UI;
 
     public void Menu ()
     {
@@ -18,9 +20,11 @@ public class WinLevel : MonoBehaviour
 
     public void Continue()
     {
+        wave.waveIndex = 0;
         levelIndex = "Level Select";
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
         StartCoroutine(Load(levelIndex));
+        StartCoroutine(Loading());
     }
 
     IEnumerator Load(string levelIndex)
@@ -31,5 +35,11 @@ public class WinLevel : MonoBehaviour
         yield return new WaitForSeconds(2);
         //load
         SceneManager.LoadScene(levelIndex);
+   }
+
+   IEnumerator Loading()
+   {
+        yield return new WaitForSeconds(5);
+        UI.SetActive(false);
    }
 }

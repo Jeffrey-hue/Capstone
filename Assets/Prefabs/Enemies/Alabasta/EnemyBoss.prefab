@@ -397,6 +397,8 @@ MonoBehaviour:
   value: 1000
   healthbar: {fileID: 1951422003252350000}
   slowTime: 2
+  bleedTime: 10
+  IsBleeding: 0
 --- !u!114 &5755614188613069714
 MonoBehaviour:
   m_ObjectHideFlags: 0

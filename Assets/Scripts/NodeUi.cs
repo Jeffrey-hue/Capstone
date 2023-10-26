@@ -52,4 +52,9 @@ public class NodeUi : MonoBehaviour
         BuildManager.instance.DeselectNode();
     }
 
+    public void Ability()
+    {
+        Debug.Log("Ability");
+    }
+
 }

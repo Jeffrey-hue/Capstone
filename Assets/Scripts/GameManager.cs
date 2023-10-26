@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameEnded){
+            Debug.Log("ugh");
             return;
         }
         if (PlayerStats.Lives <= 0)

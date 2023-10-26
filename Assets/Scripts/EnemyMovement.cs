@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
     transform.Translate(dir.normalized * enemy.speed * Time.deltaTime, Space.World);
     transform.rotation = Quaternion.LookRotation (dir);
 
-    if (Vector3.Distance(transform.position, target.position) <= 0.2f)
+    if (Vector3.Distance(transform.position, target.position) <= 0.3f)
     {
         GetNextWaypoints();
     }

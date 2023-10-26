@@ -394,9 +394,11 @@ MonoBehaviour:
   Startspeed: 7
   startHealth: 250
   health: 0
-  value: 100
+  value: 200
   healthbar: {fileID: 1951422003252350000}
   slowTime: 0
+  bleedTime: 10
+  IsBleeding: 0
 --- !u!114 &3019764585295680337
 MonoBehaviour:
   m_ObjectHideFlags: 0

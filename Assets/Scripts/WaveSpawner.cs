@@ -34,6 +34,10 @@ public class WaveSpawner : MonoBehaviour
   }
   void Update ()
   {
+    if(Input.GetKeyDown("z"))
+    {
+      waveIndex = waves.Length;
+    }
     if(this.enabled == false){
     }
     if (EnemiesAlive > 0)
@@ -53,7 +57,6 @@ public class WaveSpawner : MonoBehaviour
           return;
       }
       countdown -= Time.deltaTime;
-      PlayerStats.Money += value;
       WaveTimer.text = Mathf.Round(countdown).ToString();
     }
   }
@@ -61,6 +64,7 @@ public class WaveSpawner : MonoBehaviour
   IEnumerator SpawnWave()
   {
     PlayerStats.Rounds++;
+    PlayerStats.Money += value;
     Wave wave = waves[waveIndex];
     for (int z = 0; z < wave.enemies.Length; z++)
     {

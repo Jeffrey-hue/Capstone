@@ -6836,10 +6836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08998774b97c1747b4da194fed5e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
   turnSpeed: 10
   range: 100
-  fireRate: 0.4
+  fireRate: 5
   fireCountDown: 0
   enemyTag: Enemy
   partToRotate: {fileID: 8768794358377322486}

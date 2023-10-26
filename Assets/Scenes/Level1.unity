@@ -123,6 +123,140 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &27841135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 27841136}
+  - component: {fileID: 27841139}
+  - component: {fileID: 27841138}
+  - component: {fileID: 27841137}
+  m_Layer: 0
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &27841136
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27841135}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 449036805}
+  m_Father: {fileID: 916988533}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 53.7, y: 67.4}
+  m_SizeDelta: {x: 33.475, y: 49.41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &27841137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27841135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 27841138}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 524432462}
+        m_TargetAssemblyTypeName: NodeUi, Assembly-CSharp
+        m_MethodName: Ability
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &27841138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27841135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &27841139
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27841135}
+  m_CullTransparentMesh: 1
 --- !u!1 &35710375
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +423,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65270322}
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 42}
+  m_LocalPosition: {x: 0, y: 0, z: 38.4424}
   m_LocalScale: {x: 0.011127458, y: 0.01014379, z: 0.011127458}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -300,7 +434,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 60.3, y: 0.08}
-  m_SizeDelta: {x: 5242.154, y: 673}
+  m_SizeDelta: {x: 7214.5845, y: 673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &126673769
 GameObject:
@@ -477,8 +611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -31.08}
+  m_SizeDelta: {x: 0, y: -62.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136908999
 MonoBehaviour:
@@ -1515,6 +1649,141 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447054996}
   m_CullTransparentMesh: 1
+--- !u!1 &449036804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449036805}
+  - component: {fileID: 449036807}
+  - component: {fileID: 449036806}
+  m_Layer: 0
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &449036805
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449036804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 27841136}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &449036806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449036804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Ability
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 10.32
+  m_fontSizeBase: 10.32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &449036807
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449036804}
+  m_CullTransparentMesh: 1
 --- !u!1 &511773708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2352,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -2423,7 +2693,7 @@ MonoBehaviour:
   WaveTimer: {fileID: 1150404781}
   spawnPoint: {fileID: 1394782277}
   Strtbuttn: {fileID: 615683222}
-  value: 150
+  value: 300
   WaveTime: 2
   countdown: 0
   waveIndex: 0
@@ -2474,7 +2744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff412e4bf028725478fc7a28db31252c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 100000
+  startMoney: 10000
   startLives: 1
 --- !u!114 &618968910
 MonoBehaviour:
@@ -2959,6 +3229,7 @@ RectTransform:
   - {fileID: 2052242179}
   - {fileID: 703096893}
   - {fileID: 982076616}
+  - {fileID: 1692689591}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4038,13 +4309,14 @@ RectTransform:
   m_Children:
   - {fileID: 136908998}
   - {fileID: 1551518164}
+  - {fileID: 27841136}
   m_Father: {fileID: 524432461}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.07, y: 5.6164}
-  m_SizeDelta: {x: 150.9219, y: 145.5302}
+  m_AnchoredPosition: {x: -0.07000006, y: 6.559102}
+  m_SizeDelta: {x: 150.9219, y: 193.4134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916988534
 MonoBehaviour:
@@ -4521,6 +4793,8 @@ MonoBehaviour:
   transitionTime: 1
   levelIndex: 
   levelToUnlock: 2
+  wave: {fileID: 618968906}
+  UI: {fileID: 982076615}
 --- !u!1 &994267708
 GameObject:
   m_ObjectHideFlags: 0
@@ -5200,7 +5474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 38.062977, y: -52.2651}
+  m_AnchoredPosition: {x: 38.062977, y: -45.121704}
   m_SizeDelta: {x: 76.12595, y: 102.5302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226491398
@@ -6172,7 +6446,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551518163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000027674}
   m_LocalScale: {x: 0.425, y: 0.425, z: 0.425}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6181,8 +6455,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -47.6}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.00000029877, y: -78.3}
+  m_SizeDelta: {x: 100, y: 73.16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551518165
 MonoBehaviour:
@@ -6465,6 +6739,155 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1692689590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692689591}
+  - component: {fileID: 1692689594}
+  - component: {fileID: 1692689593}
+  - component: {fileID: 1692689592}
+  m_Layer: 5
+  m_Name: Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1692689591
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692689590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 743053786}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -341, y: 244}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1692689592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692689590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487b733d6b5830b4f8ca218b9257269c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1692689593}
+--- !u!114 &1692689593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692689590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Money: $27'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1692689594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692689590}
+  m_CullTransparentMesh: 1
 --- !u!1 &1726061656
 GameObject:
   m_ObjectHideFlags: 0
@@ -6941,7 +7364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 113.85893, y: -52.2651}
+  m_AnchoredPosition: {x: 113.85893, y: -45.121704}
   m_SizeDelta: {x: 76.12595, y: 102.5302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826249898
@@ -8004,6 +8427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Luffy:
+    name: 
     prefab: {fileID: 7882976801231643994, guid: 9369a205ba6db024d96c7a54f6c0f643, type: 3}
     cost: 250
     upgradedPrefab: {fileID: 7882976801231643994, guid: 2f76575fd0bcc76479831adc478bb3e2, type: 3}
@@ -8013,6 +8437,7 @@ MonoBehaviour:
     startUpgradeCost: 100
     fullyUpgraded: 0
   Zoro:
+    name: 
     prefab: {fileID: 5898878937593585125, guid: 528f4f682dbdf56409be738aec92f84a, type: 3}
     cost: 1000
     upgradedPrefab: {fileID: 5898878937593585125, guid: 30894ec778feb1e46844c20d15a594dc, type: 3}
@@ -8022,6 +8447,7 @@ MonoBehaviour:
     startUpgradeCost: 250
     fullyUpgraded: 0
   Chopper:
+    name: 
     prefab: {fileID: 2975027406246432002, guid: 48a9c682a6ed3af45a2fc188a654cf4f, type: 3}
     cost: 1250
     upgradedPrefab: {fileID: 2975027406246432002, guid: d969892a35e1bb84382f54931ff3dd91, type: 3}
@@ -8031,6 +8457,7 @@ MonoBehaviour:
     startUpgradeCost: 150
     fullyUpgraded: 0
   Robin:
+    name: 
     prefab: {fileID: 7464646948071341146, guid: 874f06165fc11c741b79d41c686a5510, type: 3}
     cost: 1100
     upgradedPrefab: {fileID: 7464646948071341146, guid: 10175085f9dc6b8439419608d0ae42c1, type: 3}
@@ -8040,6 +8467,7 @@ MonoBehaviour:
     startUpgradeCost: 300
     fullyUpgraded: 0
   Uta:
+    name: 
     prefab: {fileID: 4756911637432057019, guid: b0dd5448139acef4c851fd382a7ac7a2, type: 3}
     cost: 1500
     upgradedPrefab: {fileID: 4756911637432057019, guid: 7e1705fb699987344a6f6dcdde6c7fba, type: 3}
@@ -13522,6 +13950,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -14561,6 +14990,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -14774,6 +15204,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -14811,6 +15242,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -15557,6 +15989,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -16007,6 +16440,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -16817,6 +17251,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -17276,6 +17711,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -17541,6 +17977,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -17739,6 +18176,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -17868,6 +18306,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -18353,6 +18792,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19313,6 +19753,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19449,6 +19890,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19522,6 +19964,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19729,6 +20172,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19865,6 +20309,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -19909,6 +20354,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20184,6 +20630,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20244,6 +20691,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20315,6 +20763,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20424,6 +20873,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20495,6 +20945,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20602,6 +21053,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20689,6 +21141,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20754,6 +21207,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20803,6 +21257,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -20946,6 +21401,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21101,6 +21557,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21151,6 +21608,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21209,6 +21667,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21388,6 +21847,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21459,6 +21919,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21518,6 +21979,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21588,6 +22050,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21625,6 +22088,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21832,6 +22296,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21897,6 +22362,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -21970,6 +22436,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22042,6 +22509,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22128,6 +22596,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22214,6 +22683,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22258,6 +22728,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22372,6 +22843,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22464,6 +22936,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22514,6 +22987,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22619,6 +23093,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22669,6 +23144,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22706,6 +23182,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22743,6 +23220,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22823,6 +23301,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22880,6 +23359,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -22951,6 +23431,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23022,6 +23503,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23114,6 +23596,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23193,6 +23676,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23328,6 +23812,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23397,6 +23882,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23446,6 +23932,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23552,6 +24039,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23698,6 +24186,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23768,6 +24257,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23839,6 +24329,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23883,6 +24374,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -23954,6 +24446,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24025,6 +24518,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24117,6 +24611,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24182,6 +24677,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24291,6 +24787,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24404,6 +24901,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24475,6 +24973,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24524,6 +25023,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24593,6 +25093,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24672,6 +25173,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24730,6 +25232,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24856,6 +25359,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -24964,6 +25468,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25013,6 +25518,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25077,6 +25583,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25121,6 +25628,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25191,6 +25699,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25228,6 +25737,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25277,6 +25787,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25356,6 +25867,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25405,6 +25917,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25442,6 +25955,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25492,6 +26006,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25591,6 +26106,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25641,6 +26157,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25711,6 +26228,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25782,6 +26300,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25847,6 +26366,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25884,6 +26404,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25936,6 +26457,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -25985,6 +26507,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26037,6 +26560,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26074,6 +26598,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26143,6 +26668,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26234,6 +26760,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26305,6 +26832,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26376,6 +26904,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26425,6 +26954,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26474,6 +27004,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26565,6 +27096,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26617,6 +27149,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26688,6 +27221,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26753,6 +27287,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26830,6 +27365,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -26986,6 +27522,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27030,6 +27567,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27074,6 +27612,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27111,6 +27650,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27160,6 +27700,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27204,6 +27745,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27253,6 +27795,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27332,6 +27875,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27381,6 +27925,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27473,6 +28018,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27544,6 +28090,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27615,6 +28162,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27659,6 +28207,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27696,6 +28245,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27745,6 +28295,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27794,6 +28345,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27831,6 +28383,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27902,6 +28455,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -27952,6 +28506,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28021,6 +28576,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28092,6 +28648,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28141,6 +28698,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28191,6 +28749,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28241,6 +28800,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28293,6 +28853,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28342,6 +28903,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28413,6 +28975,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28450,6 +29013,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28494,6 +29058,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28538,6 +29103,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28582,6 +29148,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28631,6 +29198,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28668,6 +29236,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28718,6 +29287,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28767,6 +29337,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28804,6 +29375,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28848,6 +29420,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28898,6 +29471,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -28947,6 +29521,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29018,6 +29593,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29055,6 +29631,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29092,6 +29669,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29163,6 +29741,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29207,6 +29786,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
@@ -29278,6 +29858,7 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0.5, z: 0}
   turret: {fileID: 0}
   towerBlueprint:
+    name: 
     prefab: {fileID: 0}
     cost: 0
     upgradedPrefab: {fileID: 0}
