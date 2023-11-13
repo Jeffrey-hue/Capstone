@@ -9,6 +9,11 @@ TagManager:
   - Dress
   - Enemy
   - Node
+  - LAbility
+  - ZAbility
+  - CAbility
+  - RAbility
+  - UAbaility
   layers:
   - Default
   - TransparentFX
