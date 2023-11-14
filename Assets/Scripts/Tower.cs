@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace Towers{
 public class Tower : MonoBehaviour
 {
 
@@ -13,10 +14,11 @@ public class Tower : MonoBehaviour
 
     [Header("Unity Setup")]
     public string enemyTag = "Enemy";
-    private Transform target;
+    public Transform target;
     public Transform partToRotate;
     public GameObject bulletPrefab;
     public Transform firepoint;
+    public GameObject abilityPrefab; 
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +68,6 @@ public class Tower : MonoBehaviour
         }
         if (fireCountDown < 0)
         {
-            Debug.Log("what");
             fireCountDown = 0;
         }
     }
@@ -86,7 +87,7 @@ public class Tower : MonoBehaviour
 
         if (bullet != null)
         {
-            bullet.Seek(target);
+           bullet.Seek(target);
         }
     }
 
@@ -95,4 +96,16 @@ public class Tower : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    public void LuffyAbil()
+    {
+        
+        GameObject projectileGO = (GameObject)Instantiate (abilityPrefab, firepoint.position, firepoint.rotation);
+        Projectile bullet = projectileGO.GetComponent<Projectile>(); 
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
+    }
+}
 }

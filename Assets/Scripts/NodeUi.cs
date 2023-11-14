@@ -4,11 +4,24 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using Towers;
 
 public class NodeUi : MonoBehaviour
 {
-
+    [Header("Images")]
+    public Image Lability;
+    public Image Zability;
+    public Image Cability;
+    public Image Rability;
+    public Image Uability;
+    [Header("UI")]
     public GameObject ui;
+    Tower Luffy;
+    Tower Zoro;
+    Tower Chopper;
+    Tower Robin;
+    Tower Uta;
+
     public TMP_Text upgradeCost;
     public TMP_Text sellAmount;
     public Button upgradeButton;
@@ -26,7 +39,14 @@ public class NodeUi : MonoBehaviour
         CabilityTime -= Time.deltaTime;
         RabilityTime -= Time.deltaTime;
         UabilityTime -= Time.deltaTime; 
-        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades >= 2){
+        Lability.fillAmount = LabilityTime / LcoolDown;
+        Zability.fillAmount = ZabilityTime / ZcoolDown;
+        Cability.fillAmount = CabilityTime / CcoolDown;
+        Rability.fillAmount = RabilityTime / RcoolDown;
+        Uability.fillAmount = UabilityTime / UcoolDown;
+
+        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades >= 3){
+            Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
             LuffyAbility.SetActive(true);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -35,7 +55,8 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Zoro" && target.numOfUpgrades >= 2){
+        if (target.towerBlueprint.name == "Zoro" && target.numOfUpgrades >= 3){
+            Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(true);
             ChopperAbility.SetActive(false);
@@ -44,7 +65,8 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Chopper" && target.numOfUpgrades >= 2){
+        if (target.towerBlueprint.name == "Chopper" && target.numOfUpgrades >= 3){
+            Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(true);
@@ -53,7 +75,8 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Robin" && target.numOfUpgrades >= 2){
+        if (target.towerBlueprint.name == "Robin" && target.numOfUpgrades >= 3){
+            Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -62,7 +85,8 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Uta" && target.numOfUpgrades >= 2){
+        if (target.towerBlueprint.name == "Uta" && target.numOfUpgrades >= 3){
+            Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -121,8 +145,9 @@ public class NodeUi : MonoBehaviour
         BuildManager.instance.DeselectNode();
     }
 
+    [Header("Ability Cooldowns")]
     public float LcoolDown;
-    private float LabilityTime;
+    public float LabilityTime;
     public float ZcoolDown;
     private float ZabilityTime;
     public float CcoolDown;
@@ -135,7 +160,8 @@ public class NodeUi : MonoBehaviour
     {
         if(LabilityTime <= 0f)
         {
-            Debug.Log("Ability");
+            Debug.Log("unsdg");
+            Luffy.LuffyAbil();
             LabilityTime = LcoolDown; 
         }
     }

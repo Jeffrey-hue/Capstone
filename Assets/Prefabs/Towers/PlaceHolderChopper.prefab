@@ -6529,7 +6529,7 @@ GameObject:
   - component: {fileID: 4814889616441981164}
   m_Layer: 0
   m_Name: PlaceHolderChopper
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6569,9 +6569,11 @@ MonoBehaviour:
   fireRate: 2.5
   fireCountDown: 0
   enemyTag: Enemy
+  target: {fileID: 0}
   partToRotate: {fileID: 2013008383938520375}
   bulletPrefab: {fileID: 5181849023132008045, guid: 91e132481f58a5d4b988ab6140dbb3e4, type: 3}
   firepoint: {fileID: 1057726236291133321}
+  abilityPrefab: {fileID: 0}
 --- !u!1 &3013730497694030738
 GameObject:
   m_ObjectHideFlags: 0

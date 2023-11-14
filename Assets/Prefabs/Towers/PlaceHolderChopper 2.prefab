@@ -6564,15 +6564,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08998774b97c1747b4da194fed5e905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 150
   turnSpeed: 10
   range: 15
   fireRate: 1
   fireCountDown: 0
   enemyTag: Enemy
+  target: {fileID: 0}
   partToRotate: {fileID: 2013008383938520375}
   bulletPrefab: {fileID: 5181849023132008045, guid: 145ce3cdb52f1ac4f9c6612d1bdb4285, type: 3}
   firepoint: {fileID: 1057726236291133321}
+  abilityPrefab: {fileID: 0}
 --- !u!1 &3013730497694030738
 GameObject:
   m_ObjectHideFlags: 0
