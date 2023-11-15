@@ -9141,7 +9141,7 @@ GameObject:
   - component: {fileID: 7846542494906076140}
   m_Layer: 0
   m_Name: PlaceholderZoro 3
-  m_TagString: Untagged
+  m_TagString: Zoro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9162,7 +9162,7 @@ Transform:
   - {fileID: 4908043169530164006}
   - {fileID: 2575857759101162432}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6022755660973580605
 Animator:
@@ -9199,12 +9199,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 20
   range: 7.22
+  buffedRange: 12
   fireRate: 1
+  buffedRate: 2
   fireCountDown: 0
   enemyTag: Enemy
+  target: {fileID: 0}
   partToRotate: {fileID: 6480394266686755367}
   bulletPrefab: {fileID: 7650775292281265100, guid: c261daf7820069740a80975ba1a4228b, type: 3}
   firepoint: {fileID: 2575857759101162432}
+  abilityPrefab: {fileID: 7650775292281265100, guid: c261daf7820069740a80975ba1a4228b, type: 3}
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 0
+  confusedTime: 0
+  buffTime: 10
+  buffed: 0
+  startRange: 0
+  startRate: 0
 --- !u!1 &5918101825499409045
 GameObject:
   m_ObjectHideFlags: 0

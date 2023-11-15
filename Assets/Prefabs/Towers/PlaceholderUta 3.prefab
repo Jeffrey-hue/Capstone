@@ -6780,7 +6780,7 @@ GameObject:
   - component: {fileID: 1547685015545159586}
   m_Layer: 0
   m_Name: PlaceholderUta 3
-  m_TagString: Untagged
+  m_TagString: Uta
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6801,7 +6801,7 @@ Transform:
   - {fileID: 6791820243413390545}
   - {fileID: 2077431909862641008}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1599837465855323250
 Animator:
@@ -6841,9 +6841,15 @@ MonoBehaviour:
   fireRate: 5
   fireCountDown: 0
   enemyTag: Enemy
+  target: {fileID: 0}
   partToRotate: {fileID: 8768794358377322486}
   bulletPrefab: {fileID: 9081422504043999636, guid: 746a8db0cd624df4a92efcd3847db54f, type: 3}
   firepoint: {fileID: 2077431909862641008}
+  abilityPrefab: {fileID: 1872164792769449233, guid: 6e1100f69ba0c0c4aa590b5ec4bd027c, type: 3}
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 6.8
+  confusedTime: 2
 --- !u!1 &4757225992518872932
 GameObject:
   m_ObjectHideFlags: 0

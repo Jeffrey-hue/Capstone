@@ -6529,7 +6529,7 @@ GameObject:
   - component: {fileID: 4814889616441981164}
   m_Layer: 0
   m_Name: PlaceHolderChopper 3
-  m_TagString: Untagged
+  m_TagString: Chopper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6566,14 +6566,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   range: 17
+  buffedRange: 0
   fireRate: 1
+  buffedRate: 0
   fireCountDown: 0
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 2013008383938520375}
   bulletPrefab: {fileID: 5181849023132008045, guid: 6dc2f6662e94d4240a49f410f675099e, type: 3}
   firepoint: {fileID: 1057726236291133321}
-  abilityPrefab: {fileID: 0}
+  abilityPrefab: {fileID: 1872164792769449233, guid: 6e1100f69ba0c0c4aa590b5ec4bd027c, type: 3}
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 8.71
+  confusedTime: 0
+  buffTime: 0
+  buffed: 0
+  startRange: 0
+  startRate: 0
+  ChopperAbilDamage: 100
 --- !u!1 &3013730497694030738
 GameObject:
   m_ObjectHideFlags: 0

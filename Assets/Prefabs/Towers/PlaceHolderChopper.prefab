@@ -6529,7 +6529,7 @@ GameObject:
   - component: {fileID: 4814889616441981164}
   m_Layer: 0
   m_Name: PlaceHolderChopper
-  m_TagString: Tower
+  m_TagString: Chopper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

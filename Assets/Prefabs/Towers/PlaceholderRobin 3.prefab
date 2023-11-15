@@ -10977,7 +10977,7 @@ GameObject:
   - component: {fileID: 400803647725122678}
   m_Layer: 0
   m_Name: PlaceholderRobin 3
-  m_TagString: Untagged
+  m_TagString: Robin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10998,7 +10998,7 @@ Transform:
   - {fileID: 5523249157120330505}
   - {fileID: 10306603702984951}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &952462139532896169
 Animator:
@@ -11035,12 +11035,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   range: 10
+  buffedRange: 0
   fireRate: 3
+  buffedRate: 0
   fireCountDown: 0
   enemyTag: Enemy
+  target: {fileID: 0}
   partToRotate: {fileID: 8602430209487051123}
   bulletPrefab: {fileID: 5775855775899583445, guid: 817cbf9056a3df74ebd22a61a5a44be5, type: 3}
   firepoint: {fileID: 10306603702984951}
+  abilityPrefab: {fileID: 914334057070553106, guid: d03101fbb8e1a114ba8f42255f1c4281, type: 3}
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 0
+  confusedTime: 0
+  buffTime: 0
+  buffed: 0
+  startRange: 0
+  startRate: 0
+  ChopperAbilDamage: 0
 --- !u!1 &7492176043559472590
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Enemy : MonoBehaviour
 {
    public float speed;
@@ -14,6 +13,7 @@ public class Enemy : MonoBehaviour
    public float slowTime = 2;
    public float bleedTime = .5f;
    public bool IsBleeding;
+   public static bool confused;
 
    public void TakeDamage(float amount)
    {
@@ -62,4 +62,15 @@ public class Enemy : MonoBehaviour
         }
         IsBleeding = false;
     }
+
+    /*public void Confused()
+    {
+        StartCoroutine(DoConfused());
+    } 
+
+    IEnumerator DoConfused()
+    {
+        yield return new WaitForSeconds(confusedTime);
+        confused = false;
+    }*/
 }

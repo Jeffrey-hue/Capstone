@@ -398,7 +398,9 @@ MonoBehaviour:
   healthbar: {fileID: 1951422003252350000}
   slowTime: 2
   bleedTime: 10
+  confusedTime: 1
   IsBleeding: 0
+  confused: 0
 --- !u!114 &5755614188613069714
 MonoBehaviour:
   m_ObjectHideFlags: 0

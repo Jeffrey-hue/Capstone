@@ -16,7 +16,7 @@ public class NodeUi : MonoBehaviour
     public Image Uability;
     [Header("UI")]
     public GameObject ui;
-    Tower Luffy;
+    public Tower Luffy;
     Tower Zoro;
     Tower Chopper;
     Tower Robin;
@@ -34,6 +34,9 @@ public class NodeUi : MonoBehaviour
     public GameObject Locked;
     void Update()
     {
+        if (target == null || target.numOfUpgrades == null){
+            return;
+        }
         LabilityTime -= Time.deltaTime;
         ZabilityTime -= Time.deltaTime;
         CabilityTime -= Time.deltaTime;
@@ -45,8 +48,8 @@ public class NodeUi : MonoBehaviour
         Rability.fillAmount = RabilityTime / RcoolDown;
         Uability.fillAmount = UabilityTime / UcoolDown;
 
-        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades >= 3){
-            Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
+        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades == 3){
+            //Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
             LuffyAbility.SetActive(true);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -55,7 +58,7 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Zoro" && target.numOfUpgrades >= 3){
+        if (target.towerBlueprint.name == "Zoro" && target.numOfUpgrades == 3){
             Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(true);
@@ -65,7 +68,7 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Chopper" && target.numOfUpgrades >= 3){
+        if (target.towerBlueprint.name == "Chopper" && target.numOfUpgrades == 3){
             Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
@@ -75,7 +78,7 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Robin" && target.numOfUpgrades >= 3){
+        if (target.towerBlueprint.name == "Robin" && target.numOfUpgrades == 3){
             Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
@@ -85,7 +88,7 @@ public class NodeUi : MonoBehaviour
             Locked.SetActive(false);
         }
 
-        if (target.towerBlueprint.name == "Uta" && target.numOfUpgrades >= 3){
+        if (target.towerBlueprint.name == "Uta" && target.numOfUpgrades == 3){
             Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
@@ -112,6 +115,14 @@ public class NodeUi : MonoBehaviour
         transform.position = target.GetBuildPosition();
 
         upgradeCost.text = "$" + target.towerBlueprint.upgradeCost;
+        if(Luffy != null)
+        {
+            Luffy = null;
+        }
+        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades == 3)
+        {
+            Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
+        }
         if(target.numOfUpgrades == 0)
         {
             target.towerBlueprint.fullyUpgraded = false;
@@ -160,7 +171,6 @@ public class NodeUi : MonoBehaviour
     {
         if(LabilityTime <= 0f)
         {
-            Debug.Log("unsdg");
             Luffy.LuffyAbil();
             LabilityTime = LcoolDown; 
         }
@@ -170,7 +180,7 @@ public class NodeUi : MonoBehaviour
     {
         if(ZabilityTime <= 0f)
         {
-            Debug.Log("Ability");
+            Zoro.ZoroAbil();
             ZabilityTime = ZcoolDown; 
         }
     }
@@ -179,7 +189,7 @@ public class NodeUi : MonoBehaviour
     {
         if(CabilityTime <= 0f)
         {
-            Debug.Log("Ability");
+            Chopper.ChopperAbil();
             CabilityTime = CcoolDown; 
         }
     }
@@ -188,7 +198,7 @@ public class NodeUi : MonoBehaviour
     {
         if(RabilityTime <= 0f)
         {
-            Debug.Log("Ability");
+            Robin.RobinAbil();
             RabilityTime = RcoolDown; 
         }
     }
@@ -197,7 +207,7 @@ public class NodeUi : MonoBehaviour
     {
         if(UabilityTime <= 0f)
         {
-            Debug.Log("Ability");
+            Uta.UtaAbil();
             UabilityTime = UcoolDown; 
         }
     }

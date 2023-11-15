@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour
 {
@@ -9,22 +11,30 @@ public class Projectile : MonoBehaviour
     public GameObject impactEffect;
     public bool slow;
     public bool bleed;
+    public bool ability;
     public float slowAmount = .2f;
     public float slowTime = 2f;
     public float bleedAmount = 2f;
     public float bleedTime = .5f;
+    public float abilityTime;
     public int damage;
     public void Seek(Transform _target)
     {
         targetPosition= _target.position;
         Target = _target;
     }
- void Update ()
+    void Update ()
     {
-        if(Target == null){
+        if(Target == null && ability == false){
             Destroy(gameObject);
             return;
         }
+
+        if(ability == true)
+        {
+            StartCoroutine(DoAbility(abilityTime));
+        }
+
         Vector3 dir = targetPosition - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
         if (dir.magnitude <= distanceThisFrame)
@@ -102,6 +112,11 @@ public class Projectile : MonoBehaviour
     void OnDrawGizmosSelected (){
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, ExplosionRadius);
+    }
+    IEnumerator DoAbility(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
 }
