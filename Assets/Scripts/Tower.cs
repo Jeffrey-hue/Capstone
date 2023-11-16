@@ -22,7 +22,9 @@ public class Tower : MonoBehaviour
     public Transform firepoint;
     public GameObject abilityPrefab;
     public float slowAmount = 1f;
-    public float slowTime = 5f; 
+    public float slowTime = 5f;
+    public float bleedAmount = 2f;
+    public float bleedTime = .5f; 
     public float abilityRadius;
     public float confusedTime;
     public float buffTime;
@@ -77,7 +79,7 @@ public class Tower : MonoBehaviour
         LockOnTarget();
         if (fireCountDown <= 0)
         {
-            //Shoot();
+            Shoot();
             fireCountDown += fireRate;
         }
         if (fireCountDown < 0)
@@ -120,7 +122,6 @@ public class Tower : MonoBehaviour
         {
             if (collider.tag == "Enemy")
             {
-                Debug.Log("uhas");
                 Slow(collider.transform);
             }
         }
@@ -144,12 +145,15 @@ public class Tower : MonoBehaviour
     } 
     public void RobinAbil()
     {
-        GameObject projectileGO = (GameObject)Instantiate (abilityPrefab, firepoint.position, firepoint.rotation);
-        Projectile bullet = projectileGO.GetComponent<Projectile>(); 
-
-        if (bullet != null)
+        Instantiate(abilityPrefab, firepoint.position, firepoint.rotation);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, abilityRadius);
+        foreach (Collider collider in colliders)
         {
-           bullet.Seek(target);
+            if (collider.tag == "Enemy")
+            {
+                Debug.Log("guasjk");
+                Bleed(collider.transform);
+            }
         }
     }
     public void UtaAbil()
@@ -160,6 +164,7 @@ public class Tower : MonoBehaviour
         {
             if (collider.tag == "Enemy")
             {
+                Slow(collider.transform);
                 Debug.Log("hsfjahsf");
                 StartCoroutine(DoConfused());
             }
@@ -197,6 +202,14 @@ public class Tower : MonoBehaviour
         if (e != null)
         {
             e.TakeDamage(ChopperAbilDamage);
+        }
+    }
+    void Bleed (Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+        if (e != null)
+        {
+            e.Bleed(bleedAmount, bleedTime);
         }
     }
 }

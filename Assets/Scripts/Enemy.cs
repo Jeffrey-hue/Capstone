@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         int currentCount = 0;
         while(currentCount < damageCount)
         {
-            health -= damageAmount;
+            TakeDamage(damageAmount);
             Debug.Log("bleeding...");
             yield return new WaitForSeconds(damageDuration);
             currentCount++;

@@ -6578,13 +6578,13 @@ MonoBehaviour:
   abilityPrefab: {fileID: 1872164792769449233, guid: 6e1100f69ba0c0c4aa590b5ec4bd027c, type: 3}
   slowAmount: 1
   slowTime: 5
-  abilityRadius: 8.71
+  abilityRadius: 331.2
   confusedTime: 0
   buffTime: 0
   buffed: 0
   startRange: 0
   startRate: 0
-  ChopperAbilDamage: 100
+  ChopperAbilDamage: 25
 --- !u!1 &3013730497694030738
 GameObject:
   m_ObjectHideFlags: 0

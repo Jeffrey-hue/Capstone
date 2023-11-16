@@ -39,6 +39,11 @@ public class EnemyMovement : MonoBehaviour
             EndPath();
             return;
         }
+        if (wavepointIndex == 0 && Enemy.confused == true)
+        {
+            Enemy.confused = false;
+            return;
+        }
         if (Enemy.confused == true)
         {
             wavepointIndex--;

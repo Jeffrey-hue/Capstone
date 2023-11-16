@@ -11047,7 +11047,9 @@ MonoBehaviour:
   abilityPrefab: {fileID: 914334057070553106, guid: d03101fbb8e1a114ba8f42255f1c4281, type: 3}
   slowAmount: 1
   slowTime: 5
-  abilityRadius: 0
+  bleedAmount: 3.14
+  bleedTime: 1
+  abilityRadius: 372.33
   confusedTime: 0
   buffTime: 0
   buffed: 0

@@ -11385,16 +11385,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   range: 15
+  buffedRange: 0
   fireRate: 1
+  buffedRate: 0
   fireCountDown: 0
-  abilityTime: 3
   enemyTag: Enemy
   target: {fileID: 0}
   partToRotate: {fileID: 1581494356312914055}
   bulletPrefab: {fileID: 202033295009574406, guid: 7c7a14dc132c59b43badf48c69bbaf65, type: 3}
   firepoint: {fileID: 2545368701153291374}
   abilityPrefab: {fileID: 1872164792769449233, guid: 6e1100f69ba0c0c4aa590b5ec4bd027c, type: 3}
-  abilityRadius: 8.34
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 284.3
+  confusedTime: 0
+  buffTime: 0
+  buffed: 0
+  startRange: 0
+  startRate: 0
+  ChopperAbilDamage: 0
 --- !u!1 &7923966839943935285
 GameObject:
   m_ObjectHideFlags: 0

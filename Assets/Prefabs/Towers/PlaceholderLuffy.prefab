@@ -11327,7 +11327,7 @@ GameObject:
   - component: {fileID: 3721367777157458758}
   m_Layer: 0
   m_Name: PlaceholderLuffy
-  m_TagString: Luffy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11385,7 +11385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   range: 10
+  buffedRange: 0
   fireRate: 1
+  buffedRate: 0
   fireCountDown: 0
   enemyTag: Enemy
   target: {fileID: 0}
@@ -11393,6 +11395,15 @@ MonoBehaviour:
   bulletPrefab: {fileID: 202033295009574406, guid: ce1b8fa7704b1b44e9f1fce0c442778e, type: 3}
   firepoint: {fileID: 2545368701153291374}
   abilityPrefab: {fileID: 1872164792769449233, guid: 6e1100f69ba0c0c4aa590b5ec4bd027c, type: 3}
+  slowAmount: 1
+  slowTime: 5
+  abilityRadius: 0
+  confusedTime: 0
+  buffTime: 0
+  buffed: 0
+  startRange: 0
+  startRate: 0
+  ChopperAbilDamage: 0
 --- !u!1 &7923966839943935285
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,36 +8,33 @@ using Towers;
 
 public class NodeUi : MonoBehaviour
 {
-    [Header("Images")]
+    /*[Header("Images")]
     public Image Lability;
     public Image Zability;
     public Image Cability;
     public Image Rability;
-    public Image Uability;
+    public Image Uability;*/
     [Header("UI")]
     public GameObject ui;
-    public Tower Luffy;
-    Tower Zoro;
-    Tower Chopper;
-    Tower Robin;
-    Tower Uta;
+    //public Tower Luffy;
+    //public Tower Zoro;
+    //public Tower Chopper;
+    //public Tower Robin;
+    //public Tower Uta;
 
     public TMP_Text upgradeCost;
     public TMP_Text sellAmount;
     public Button upgradeButton;
-    private Node target;
-    public GameObject LuffyAbility;
-    public GameObject ZoroAbility;
-    public GameObject ChopperAbility;
-    public GameObject RobinAbility;
-    public GameObject UtaAbility;
-    public GameObject Locked;
-    void Update()
+    public Node target;
+    //public GameObject LuffyAbility;
+    //public GameObject ZoroAbility;
+    //public GameObject ChopperAbility;
+    //public GameObject RobinAbility;
+    //public GameObject UtaAbility;
+    //public GameObject Locked;
+    /*void Update()
     {
-        if (target == null || target.numOfUpgrades == null){
-            return;
-        }
-        LabilityTime -= Time.deltaTime;
+        /*LabilityTime -= Time.deltaTime;
         ZabilityTime -= Time.deltaTime;
         CabilityTime -= Time.deltaTime;
         RabilityTime -= Time.deltaTime;
@@ -46,10 +43,10 @@ public class NodeUi : MonoBehaviour
         Zability.fillAmount = ZabilityTime / ZcoolDown;
         Cability.fillAmount = CabilityTime / CcoolDown;
         Rability.fillAmount = RabilityTime / RcoolDown;
-        Uability.fillAmount = UabilityTime / UcoolDown;
+        Uability.fillAmount = UabilityTime / UcoolDown;*/
 
-        if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades == 3){
-            //Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
+        /*if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades == 3){
+            Luffy = GetComponents<>();
             LuffyAbility.SetActive(true);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -59,7 +56,7 @@ public class NodeUi : MonoBehaviour
         }
 
         if (target.towerBlueprint.name == "Zoro" && target.numOfUpgrades == 3){
-            Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
+            //Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(true);
             ChopperAbility.SetActive(false);
@@ -69,7 +66,7 @@ public class NodeUi : MonoBehaviour
         }
 
         if (target.towerBlueprint.name == "Chopper" && target.numOfUpgrades == 3){
-            Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
+            //Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(true);
@@ -79,7 +76,7 @@ public class NodeUi : MonoBehaviour
         }
 
         if (target.towerBlueprint.name == "Robin" && target.numOfUpgrades == 3){
-            Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
+            //Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -89,7 +86,7 @@ public class NodeUi : MonoBehaviour
         }
 
         if (target.towerBlueprint.name == "Uta" && target.numOfUpgrades == 3){
-            Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
+            //Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
             LuffyAbility.SetActive(false);
             ZoroAbility.SetActive(false);
             ChopperAbility.SetActive(false);
@@ -106,7 +103,7 @@ public class NodeUi : MonoBehaviour
             UtaAbility.SetActive(false);
             Locked.SetActive(true);
         }
-    }
+    }*/
 
     public void SetTarget (Node _target)
     {
@@ -115,14 +112,14 @@ public class NodeUi : MonoBehaviour
         transform.position = target.GetBuildPosition();
 
         upgradeCost.text = "$" + target.towerBlueprint.upgradeCost;
-        if(Luffy != null)
+        /*if(Luffy != null)
         {
             Luffy = null;
         }
         if (target.towerBlueprint.name == "Luffy" && target.numOfUpgrades == 3)
         {
-            Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
-        }
+            //Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
+        }*/
         if(target.numOfUpgrades == 0)
         {
             target.towerBlueprint.fullyUpgraded = false;
@@ -156,7 +153,7 @@ public class NodeUi : MonoBehaviour
         BuildManager.instance.DeselectNode();
     }
 
-    [Header("Ability Cooldowns")]
+    /*[Header("Ability Cooldowns")]
     public float LcoolDown;
     public float LabilityTime;
     public float ZcoolDown;
@@ -210,6 +207,5 @@ public class NodeUi : MonoBehaviour
             Uta.UtaAbil();
             UabilityTime = UcoolDown; 
         }
-    }
-
+    }*/
 }
