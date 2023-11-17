@@ -15,6 +15,7 @@ public class WinLevel : MonoBehaviour
     public void Menu ()
     {
         levelIndex = "MainMenu";
+        PlayerPrefs.SetInt("levelReached", levelToUnlock);
         StartCoroutine(Load(levelIndex));
     }
 

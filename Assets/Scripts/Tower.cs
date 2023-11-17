@@ -79,7 +79,7 @@ public class Tower : MonoBehaviour
         LockOnTarget();
         if (fireCountDown <= 0)
         {
-            Shoot();
+            //Shoot();
             fireCountDown += fireRate;
         }
         if (fireCountDown < 0)
