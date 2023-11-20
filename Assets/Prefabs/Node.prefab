@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4705173961633590530}
   m_Layer: 0
   m_Name: Node
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,4 +118,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920a8ab5ed90dcb47ae4de3dde0cf9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  shop: {fileID: 0}
+  noMoneyColor: {r: 0.9150943, g: 0.18503752, b: 0.082013145, a: 1}
+  hoverColor: {r: 0.26415092, g: 0.25792095, b: 0.25792095, a: 1}
+  positionOffset: {x: 0, y: 0.5, z: 0}
+  turret: {fileID: 0}
+  towerBlueprint:
+    name: 
+    prefab: {fileID: 0}
+    cost: 0
+    upgradedPrefab: {fileID: 0}
+    upgradedTwoPrefab: {fileID: 0}
+    upgradedThreePrefab: {fileID: 0}
+    upgradeCost: 0
+    startUpgradeCost: 0
+    fullyUpgraded: 0
+  numOfUpgrades: 0
+  rend: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  LRange: 10
+  ZRange: 5.45
+  CRange: 10
+  RRange: 10
+  URange: 100

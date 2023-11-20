@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Animator cam;
     public WaveSpawner waves;
     public static bool gameEnded;
     public GameObject gameOverUI;
@@ -15,12 +16,16 @@ public class GameManager : MonoBehaviour
     {
         gameEnded = false;
         waves.enabled = true;
+        cam.enabled = false;
     }
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("p"))
+        {
+            WinLevel();
+        }
         if (gameEnded){
-            Debug.Log("ugh");
             return;
         }
         if (PlayerStats.Lives <= 0)
@@ -40,8 +45,16 @@ public class GameManager : MonoBehaviour
     public void WinLevel()
     {
         gameEnded = true;
+        StartCoroutine(WinAnim());
+    }
+
+    IEnumerator WinAnim()
+   {
+        cam.enabled = true;
+        cam.SetTrigger("g");
+        yield return new WaitForSeconds(3);
         WinUI.SetActive(true);
         shopUI.SetActive(false);
-    }
+   }
     
 }

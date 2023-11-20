@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     
      public void Update ()
      {
-          if (Input.GetKey("q"))
+          if (Input.GetKey("p"))
           {
                PlayerPrefs.SetInt("levelReached", 1);
           }

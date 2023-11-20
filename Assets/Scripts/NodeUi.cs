@@ -26,6 +26,7 @@ public class NodeUi : MonoBehaviour
     public TMP_Text sellAmount;
     public Button upgradeButton;
     public Node target;
+    public GameObject rangeIndicator;
     //public GameObject LuffyAbility;
     //public GameObject ZoroAbility;
     //public GameObject ChopperAbility;
@@ -111,6 +112,10 @@ public class NodeUi : MonoBehaviour
 
         transform.position = target.GetBuildPosition();
 
+        rangeIndicator.SetActive(true);
+        rangeIndicator.transform.position = target.GetBuildPosition();
+        rangeIndicator.transform.localScale = new Vector3(target.turret.GetComponent<Tower>().range, 4, target.turret.GetComponent<Tower>().range);
+
         upgradeCost.text = "$" + target.towerBlueprint.upgradeCost;
         /*if(Luffy != null)
         {
@@ -139,6 +144,7 @@ public class NodeUi : MonoBehaviour
     public void Hide ()
     {
         ui.SetActive(false);
+        rangeIndicator.SetActive(false);
     }
 
     public void Upgrade ()

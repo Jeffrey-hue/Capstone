@@ -38,37 +38,51 @@ public class ImageChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FindTarget();
+    }
+
+    public void FindTarget()
+    {
+        if (nodeui.target == null)
+        {
+            return;
+        }
+        if (nodeui.target.towerBlueprint.name != "Luffy" && nodeui.target.towerBlueprint.name != "Zoro" && nodeui.target.towerBlueprint.name != "Chopper" && nodeui.target.towerBlueprint.name != "Robin" && nodeui.target.towerBlueprint.name != "Uta")
+        {
+            Debug.Log("yjfas");
+            return;
+        }
         if (nodeui.target.towerBlueprint.name == "Luffy" && nodeui.target.numOfUpgrades == 3)
         {
             Llocked = false;
-            Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
+            //Luffy = GameObject.FindGameObjectWithTag("Luffy").GetComponent<Tower>();
             system.abilityImage1.GetComponent<Image>().sprite = LuffyAbility;
         }
         if (nodeui.target.towerBlueprint.name == "Zoro" && nodeui.target.numOfUpgrades == 3)
         {
             Zlocked = false;
-            Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
+            //Zoro = GameObject.FindGameObjectWithTag("Zoro").GetComponent<Tower>();
             system.abilityImage2.GetComponent<Image>().sprite = ZoroAbility;
         }
 
         if (nodeui.target.towerBlueprint.name == "Chopper" && nodeui.target.numOfUpgrades == 3)
         {
             Clocked = false;
-            Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
+            //Chopper = GameObject.FindGameObjectWithTag("Chopper").GetComponent<Tower>();
             system.abilityImage3.GetComponent<Image>().sprite = ChopperAbility;
         }
 
         if (nodeui.target.towerBlueprint.name == "Robin" && nodeui.target.numOfUpgrades == 3)
         {
             Rlocked = false;
-            Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
+            //Robin = GameObject.FindGameObjectWithTag("Robin").GetComponent<Tower>();
             system.abilityImage4.GetComponent<Image>().sprite = RobinAbility;
         }
 
         if (nodeui.target.towerBlueprint.name == "Uta" && nodeui.target.numOfUpgrades == 3)
         {
             Ulocked = false;
-            Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
+            //Uta = GameObject.FindGameObjectWithTag("Uta").GetComponent<Tower>();
             system.abilityImage5.GetComponent<Image>().sprite = UtaAbility;
         }
     }

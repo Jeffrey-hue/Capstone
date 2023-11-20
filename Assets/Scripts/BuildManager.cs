@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Towers;
 
 public class BuildManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class BuildManager : MonoBehaviour
     public GameObject Robin;
     public GameObject Uta;
     public NodeUi nodeUI;
+    public Shop shop;
     private TowerBlueprint turretToBuild;
     private Node selectedNode;
 
@@ -52,6 +54,9 @@ public class BuildManager : MonoBehaviour
 
     public TowerBlueprint GetTurretToBuild ()
     {
+        /*shop.ui.rangeIndicator.SetActive(true);
+        shop.ui.rangeIndicator.transform.position = selectedNode.GetBuildPosition();
+        shop.ui.rangeIndicator.transform.localScale = new Vector3(selectedNode.turret.GetComponent<Tower>().range, 1, selectedNode.turret.GetComponent<Tower>().range);*/
         return turretToBuild;
     }
 }

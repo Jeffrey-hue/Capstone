@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Towers;
 
 public class Node : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class Node : MonoBehaviour
     public Renderer rend;
     public Color startColor;
     BuildManager buildManager;
+    /*public float range;
+    public float LRange;
+    public float ZRange;
+    public float CRange;
+    public float RRange;
+    public float URange;*/
 
     /*void Awake ()
     {
@@ -36,6 +43,12 @@ public class Node : MonoBehaviour
 
         if (turret != null)
         {
+            shop.hideNodes = true;
+            shop.LuffyDesc.SetActive(false);
+            shop.ZoroDesc.SetActive(false);
+            shop.ChopperDesc.SetActive(false);
+            shop.RobinDesc.SetActive(false);
+            shop.UtaDesc.SetActive(false);
             buildManager.SelectNode(this);
             return;
         }
@@ -44,7 +57,11 @@ public class Node : MonoBehaviour
         {
             return;
         }
-
+        shop.LuffyDesc.SetActive(false);
+        shop.ZoroDesc.SetActive(false);
+        shop.ChopperDesc.SetActive(false);
+        shop.RobinDesc.SetActive(false);
+        shop.UtaDesc.SetActive(false);
         BuildTurret(buildManager.GetTurretToBuild());
     }
     void BuildTurret (TowerBlueprint blueprint)
@@ -130,6 +147,9 @@ public class Node : MonoBehaviour
         //}
         if (buildManager.HasMoney)
         {
+            /*shop.ui.rangeIndicator.SetActive(true);
+            shop.ui.rangeIndicator.transform.position = GetBuildPosition();
+            shop.ui.rangeIndicator.transform.localScale = new Vector3(range, 1, range);*/
             rend.material.color = hoverColor;
         }
         else
