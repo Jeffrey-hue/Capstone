@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Timer timer;
     public Animator cam;
     public WaveSpawner waves;
     public static bool gameEnded;
