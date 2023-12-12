@@ -116,7 +116,7 @@ public class NodeUi : MonoBehaviour
         rangeIndicator.transform.position = target.GetBuildPosition();
         rangeIndicator.transform.localScale = new Vector3(target.turret.GetComponent<Tower>().range, 4, target.turret.GetComponent<Tower>().range);
 
-        upgradeCost.text = "$" + target.towerBlueprint.upgradeCost;
+        upgradeCost.text = "" + target.towerBlueprint.upgradeCost;
         /*if(Luffy != null)
         {
             Luffy = null;
@@ -136,7 +136,7 @@ public class NodeUi : MonoBehaviour
         {
             upgradeButton.interactable = true;
         }
-        sellAmount.text = "$" + target.towerBlueprint.GetSellAmount();
+        sellAmount.text = "" + target.towerBlueprint.GetSellAmount();
 
         ui.SetActive(true);
     }
