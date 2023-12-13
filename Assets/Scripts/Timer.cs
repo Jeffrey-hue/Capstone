@@ -7,8 +7,9 @@ using System;
 public class Timer : MonoBehaviour
 {
     public bool timerActive = false;
-    float currentTime;
+    public float currentTime;
     public TextMeshProUGUI timerText;
+    public TimeSpan timepass;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class Timer : MonoBehaviour
             StopTimer();
         }
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        timepass = time;
         timerText.text = time.ToString(@"mm\.ss\.fff");
     }
 

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Timer timer;
     public Animator cam;
     public WaveSpawner waves;
     public static bool gameEnded;
     public GameObject gameOverUI;
     public GameObject WinUI;
     public GameObject shopUI;
+    public GameObject abilityUI;
+    public GameObject moneyUI;
     public string nextLevel = "Level2";
     public int levelToUnlock = 2;
     void Start ()
@@ -41,6 +42,8 @@ public class GameManager : MonoBehaviour
         gameEnded = true;
         gameOverUI.SetActive(true);
         shopUI.SetActive(false);
+        abilityUI.SetActive(false);
+        moneyUI.SetActive(false);
     }
 
     public void WinLevel()
@@ -56,6 +59,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         WinUI.SetActive(true);
         shopUI.SetActive(false);
+        abilityUI.SetActive(false);
+        moneyUI.SetActive(false);
    }
     
 }
