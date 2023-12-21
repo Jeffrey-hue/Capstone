@@ -36,6 +36,12 @@ public class Shop : MonoBehaviour
     public float ChopperFR;
     public float RobinFR;
     public float UtaFR;
+    [Header("Unity Price")]
+    public float LuffyPr;
+    public float ZoroPr;
+    public float ChopperPr;
+    public float RobinPr;
+    public float UtaPr;
     [Header("Desc")]
     public GameObject LuffyDesc;
     public GameObject ZoroDesc;
@@ -60,6 +66,13 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI ChopperRange;
     public TextMeshProUGUI RobinRange;
     public TextMeshProUGUI UtaRange;
+    [Header("Money")]
+    public TextMeshProUGUI LuffyPrice;
+    public TextMeshProUGUI ZoroPrice;
+    public TextMeshProUGUI ChopperPrice;
+    public TextMeshProUGUI RobinPrice;
+    public TextMeshProUGUI UtaPrice;
+
 
     BuildManager buildManager;
     void Start ()
@@ -88,6 +101,12 @@ public class Shop : MonoBehaviour
         ChopperRange.text = "Range: " + ChopperR;
         RobinRange.text = "Range: " + RobinR;
         UtaRange.text = "Range: " + UtaR;
+
+        LuffyPrice.text = "$" + LuffyPr;
+        ZoroPrice.text = "$" + ZoroPr;
+        ChopperPrice.text = "$" + ChopperPr;
+        RobinPrice.text = "$" + RobinPr;
+        UtaPrice.text = "$" + UtaPr;
     }
     void Update ()
     {

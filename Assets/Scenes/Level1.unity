@@ -916,7 +916,7 @@ MonoBehaviour:
   Locked: {fileID: 21300000, guid: 1fe1b080913541446a7d513d4ca4a1c8, type: 3}
   LuffyAbility: {fileID: 21300000, guid: a3c70f380878a0140bcbc871c182ff85, type: 3}
   ZoroAbility: {fileID: 21300000, guid: 3f80f7a3107cff34fb5318d0ee75980a, type: 3}
-  ChopperAbility: {fileID: 21300000, guid: ee0cfe40e3b667647b60eec2414f53e1, type: 3}
+  ChopperAbility: {fileID: 21300000, guid: 00f9e19bb5f7624448f54d8117a91932, type: 3}
   RobinAbility: {fileID: 21300000, guid: 4a2b6bd5a5d9dd4418ea55f1d9cdd2f8, type: 3}
   UtaAbility: {fileID: 21300000, guid: e8e5313944a680347a2b9d408339adff, type: 3}
   Llocked: 0
@@ -959,7 +959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 28.1, y: 28.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &126673771
@@ -986,15 +986,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
+  m_sharedMaterial: {fileID: -5063972801430275452, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1328,7 +1328,7 @@ RectTransform:
   m_GameObject: {fileID: 139859089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 356456899}
@@ -1337,7 +1337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.5, y: -56.7}
+  m_AnchoredPosition: {x: 18.4, y: -55.9}
   m_SizeDelta: {x: 45.75, y: 63.8515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &139859091
@@ -2446,7 +2446,7 @@ MonoBehaviour:
   Locked: {fileID: 21300000, guid: 1fe1b080913541446a7d513d4ca4a1c8, type: 3}
   LuffyAbility: {fileID: 21300000, guid: a3c70f380878a0140bcbc871c182ff85, type: 3}
   ZoroAbility: {fileID: 21300000, guid: 3f80f7a3107cff34fb5318d0ee75980a, type: 3}
-  ChopperAbility: {fileID: 21300000, guid: ee0cfe40e3b667647b60eec2414f53e1, type: 3}
+  ChopperAbility: {fileID: 21300000, guid: 00f9e19bb5f7624448f54d8117a91932, type: 3}
   RobinAbility: {fileID: 21300000, guid: 4a2b6bd5a5d9dd4418ea55f1d9cdd2f8, type: 3}
   UtaAbility: {fileID: 21300000, guid: e8e5313944a680347a2b9d408339adff, type: 3}
   Llocked: 0
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   Locked: {fileID: 21300000, guid: 1fe1b080913541446a7d513d4ca4a1c8, type: 3}
   LuffyAbility: {fileID: 21300000, guid: a3c70f380878a0140bcbc871c182ff85, type: 3}
   ZoroAbility: {fileID: 21300000, guid: 3f80f7a3107cff34fb5318d0ee75980a, type: 3}
-  ChopperAbility: {fileID: 21300000, guid: ee0cfe40e3b667647b60eec2414f53e1, type: 3}
+  ChopperAbility: {fileID: 21300000, guid: 00f9e19bb5f7624448f54d8117a91932, type: 3}
   RobinAbility: {fileID: 21300000, guid: 4a2b6bd5a5d9dd4418ea55f1d9cdd2f8, type: 3}
   UtaAbility: {fileID: 21300000, guid: e8e5313944a680347a2b9d408339adff, type: 3}
   Llocked: 0
@@ -3838,7 +3838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 28.100021, y: 28.199993}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522240427
@@ -3863,15 +3863,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Uta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
+  m_sharedMaterial: {fileID: -5063972801430275452, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7876,7 +7876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 28.100021, y: 28.199993}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908312233
@@ -7901,15 +7901,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Robin
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
+  m_sharedMaterial: {fileID: -5063972801430275452, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8445,7 +8445,7 @@ MonoBehaviour:
   Locked: {fileID: 21300000, guid: 1fe1b080913541446a7d513d4ca4a1c8, type: 3}
   LuffyAbility: {fileID: 21300000, guid: a3c70f380878a0140bcbc871c182ff85, type: 3}
   ZoroAbility: {fileID: 21300000, guid: 3f80f7a3107cff34fb5318d0ee75980a, type: 3}
-  ChopperAbility: {fileID: 21300000, guid: ee0cfe40e3b667647b60eec2414f53e1, type: 3}
+  ChopperAbility: {fileID: 21300000, guid: 00f9e19bb5f7624448f54d8117a91932, type: 3}
   RobinAbility: {fileID: 21300000, guid: 4a2b6bd5a5d9dd4418ea55f1d9cdd2f8, type: 3}
   UtaAbility: {fileID: 21300000, guid: e8e5313944a680347a2b9d408339adff, type: 3}
   Llocked: 0
@@ -9060,7 +9060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 28.100021, y: 28.199993}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &994267710
@@ -9087,15 +9087,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
+  m_sharedMaterial: {fileID: -5063972801430275452, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9221,7 +9221,7 @@ RectTransform:
   m_GameObject: {fileID: 999475796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 104465676}
@@ -9230,7 +9230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.549963, y: 8.4}
+  m_AnchoredPosition: {x: 18.5, y: 15}
   m_SizeDelta: {x: 45.65, y: 63.8515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999475798
@@ -9405,7 +9405,7 @@ RectTransform:
   m_GameObject: {fileID: 1057176869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 929514452}
@@ -9414,7 +9414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.4, y: 33.2}
+  m_AnchoredPosition: {x: 21.3, y: 38.1}
   m_SizeDelta: {x: 45.7501, y: 63.8515}
   m_Pivot: {x: 1.706141, y: -0.13372703}
 --- !u!114 &1057176871
@@ -11986,7 +11986,7 @@ RectTransform:
   m_GameObject: {fileID: 1417786687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2983426, y: 1.1414, z: 1.1414}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1518051416}
@@ -11995,7 +11995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44.950504, y: 8.4}
+  m_AnchoredPosition: {x: -41, y: 12.5}
   m_SizeDelta: {x: 45.65, y: 63.8515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417786689
@@ -12766,7 +12766,7 @@ MonoBehaviour:
   Locked: {fileID: 21300000, guid: 1fe1b080913541446a7d513d4ca4a1c8, type: 3}
   LuffyAbility: {fileID: 21300000, guid: a3c70f380878a0140bcbc871c182ff85, type: 3}
   ZoroAbility: {fileID: 21300000, guid: 3f80f7a3107cff34fb5318d0ee75980a, type: 3}
-  ChopperAbility: {fileID: 21300000, guid: ee0cfe40e3b667647b60eec2414f53e1, type: 3}
+  ChopperAbility: {fileID: 21300000, guid: 00f9e19bb5f7624448f54d8117a91932, type: 3}
   RobinAbility: {fileID: 21300000, guid: 4a2b6bd5a5d9dd4418ea55f1d9cdd2f8, type: 3}
   UtaAbility: {fileID: 21300000, guid: e8e5313944a680347a2b9d408339adff, type: 3}
   Llocked: 0
@@ -15046,7 +15046,7 @@ RectTransform:
   m_GameObject: {fileID: 1807553193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 370465668}
@@ -15055,7 +15055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.000504, y: -56.7}
+  m_AnchoredPosition: {x: -40.4, y: -57.5}
   m_SizeDelta: {x: 45.75, y: 63.8515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807553195
@@ -17141,6 +17141,11 @@ MonoBehaviour:
   ChopperFR: 2.5
   RobinFR: 1.5
   UtaFR: 5
+  LuffyPr: 250
+  ZoroPr: 1000
+  ChopperPr: 1250
+  RobinPr: 1100
+  UtaPr: 1500
   LuffyDesc: {fileID: 868909200}
   ZoroDesc: {fileID: 1756874457}
   ChopperDesc: {fileID: 618312714}
@@ -17161,6 +17166,11 @@ MonoBehaviour:
   ChopperRange: {fileID: 252135599}
   RobinRange: {fileID: 1527377610}
   UtaRange: {fileID: 1930660006}
+  LuffyPrice: {fileID: 994267710}
+  ZoroPrice: {fileID: 126673771}
+  ChopperPrice: {fileID: 2135072670}
+  RobinPrice: {fileID: 908312233}
+  UtaPrice: {fileID: 522240427}
 --- !u!1 &2062576599
 GameObject:
   m_ObjectHideFlags: 0
@@ -17772,7 +17782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 28.100021, y: 28.199993}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2135072670
@@ -17797,15 +17807,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Chopper
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
+  m_sharedMaterial: {fileID: -5063972801430275452, guid: 883f982ecd632844398120fd9d83c4b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
